@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an Industrial Engineering master's student at [Bogazici Univeristy](https://ie.boun.edu.tr/), Istanbul. I am also a Research Associate (on study leave) at [DERASAT](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/), Bahrain. I worked at DERASAT since 2014 conducting policy research in the area of energy economics. I have a M.A. in [Economics](https://www.binghamton.edu/economics/index.html) from SUNY at Binghamton ([Fulbright Scholarship](https://us.fulbrightonline.org/)) and B.Sc. in [Infomration Systems](https://cit.uob.edu.bh/our-departments/information-systems/) from The University of Bahrain.
+I am an Industrial Engineering master's student at [Bogazici University](https://ie.boun.edu.tr/), Istanbul. I am also a Research Associate (on study leave) at [DERASAT](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/), Bahrain. I have worked at DERASAT since 2014, conducting policy research in energy economics. I have an M.A. in [Economics](https://www.binghamton.edu/economics/index.html) from SUNY at Binghamton ([Fulbright Scholarship](https://us.fulbrightonline.org/)) and a B.Sc. in [Information Systems](https://cit.uob.edu.bh/our-departments/information-systems/) from The University of Bahrain.
 
 Research
 ------
