@@ -18,7 +18,7 @@ Education
 Work experience
 ======
 * DERASAT
-  * 2020 - Present: Research Associate
+  * 2020 - Present: Research Associate (on study leave)
   * 2017 - 2020: Analyst
   * 2014 - 2017: Research Assistant
   
