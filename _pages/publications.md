@@ -19,12 +19,12 @@ You can find my previous articles on my DERASAT [profile page](https://www.deras
 ### Solving the Traveling Salesman with Profit (TSPP) problem using Any Colony System (ACS)
 This [project](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/Project.pdf) was part of a graduate level course on [Heuristic Optimization](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/IE_517_syllabus.PDF). The aim was to solve implement an algorithm to solve multiple instances of TSPP problem.
 
-Click [here](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/TSPP.rar) to download the code, TSPP instances and a short report.
+Click [here](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/TSPP.rar) to download the c++ code, TSPP instances and a short report.
 
 ### Ecological simulation and analysis using System Dynamics
-This [project](https:///abdulaziz-aldoseri.github.io/files/SD/) was part of a graduate level course on [Heuristic Optimization](https:///abdulaziz-aldoseri.github.io/files/SD/). The aim was to solve implement an algorithm to solve multiple instances of TSPP problem.
+This project was part of a graduate level course on [System Dynamics](https:///abdulaziz-aldoseri.github.io/files/SD/IE_550_syllabus.PDF). The aim was to simualte and analyze the dynamics of an endangered fish species given different government protective policies.
 
-Click [here](https:///abdulaziz-aldoseri.github.io/files/SD) to download the code, TSPP instances and a short report.
+Click [here](https:///abdulaziz-aldoseri.github.io/files/SD/Project.rar) to download the simulation code (VENSIM) and report.
 
 
 
