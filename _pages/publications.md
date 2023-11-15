@@ -11,7 +11,7 @@ You can find my previous articles on my DERASAT [profile page](https://www.deras
 ## M.S. Thesis (Work in Progress)
 The aim of this thesis is to solve the problem of natural gas storage valuation. [Here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Proposal.pdf) you can find the thesis proposal.
 
-I will share the source-code for the thesis very soon.
+I will share the source code for the thesis very soon.
 
 ## Sample essay
 ### System Dynamics and Minsky's Financial Instability Hypothesis
