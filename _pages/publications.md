@@ -14,7 +14,7 @@ You can also find my previous articles on my [DERASAT profile](https://www.deras
 ### Solving the Traveling Salesman with Profit (TSPP) problem using Any Colony System (ACS)
 This [project](https://github.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/_misc/Project.pdf) was part of a graduate level course on [Heuristic Optimization](https://github.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/_misc/IE_517_syllabus.PDF). The aim was to solve implement an algorithm to solve multiple instances of TSPP problem.
 
-Click [here](https://github.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/_misc/TSPP.rar) <a href="[file.txt](https://github.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/_misc/TSPP.rar)">HERE</a> to download the code, TSPP instances and a short report.
+Click [here](https://github.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/_misc/TSPP.rar) <a href="https://github.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/_misc/TSPP.rar">HERE</a> to download the code, TSPP instances and a short report.
 
 ### Traveling Salesman with Profit (TSPP)
 
