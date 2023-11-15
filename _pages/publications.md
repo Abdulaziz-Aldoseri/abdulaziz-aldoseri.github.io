@@ -8,6 +8,11 @@ author_profile: true
 
 You can find my previous articles on my DERASAT [profile page](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/).
 
+## M.S. Thesis (Work in Progress)
+The aim of this thesis is to solve the problem of natural gas storage valuation. [Here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Proposal.pdf) you can find the thesis proposal.
+
+I will share the source-code for the thesis very soon.
+
 ## Sample essay
 ### System Dynamics and Minsky's Financial Instability Hypothesis
 [This](https:///abdulaziz-aldoseri.github.io/files/SD/Minsky.pdf) is a concise literature review on the topic of financial instability hypothesis from a system dynamics perspective.
