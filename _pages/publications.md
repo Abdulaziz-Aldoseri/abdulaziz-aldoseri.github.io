@@ -8,8 +8,8 @@ author_profile: true
 
 You can also find my previous articles on my [DERASAT profile](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/).
 
-## Sample essay on System Dynamics and Minsky's Financial Instability Hypothesis
-
+## Sample essay
+###System Dynamics and Minsky's Financial Instability Hypothesis
 [This](https:///abdulaziz-aldoseri.github.io/files/SD/Minsky.pdf) is a concise literature review on the topic of financial instability hypothesis from a system dynamics perspective.
 
 
