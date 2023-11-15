@@ -16,7 +16,7 @@ My main research interests are in the areas of:
 
 **Stochastic Optimization**
 
-I am mainly interested in problems in which sequential decision-making is done in a stochastic environment. I attempted to solve a natural gas storage problem using Deep RL in my M.S. thesis.
+I am mainly interested in problems in which sequential decision-making is done in a stochastic environment. In my M.S. thesis, I attempted to solve a natural gas storage problem using Deep RL.
 
 **Energy Value-Chain Optimization**
 
