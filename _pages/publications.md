@@ -6,6 +6,6 @@ author_profile: true
 ---
 
 
-You can also find my previous articles on <u><a href="{{https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/}}">my DERASAT profile</a>.</u>
+You can also find my previous articles on my [DERASAT profile](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/).
 
 
