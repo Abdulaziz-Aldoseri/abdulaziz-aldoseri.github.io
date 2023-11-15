@@ -26,7 +26,7 @@ This [project](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/Project.pdf)
 
 Click [here](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/TSPP.rar) to download the c++ code, TSPP instances and a short report.
 
-### Ecological simulation and analysis using System Dynamics
+### Ecological Simulation and Analysis using System Dynamics
 This project was part of a graduate level course on [System Dynamics](https:///abdulaziz-aldoseri.github.io/files/SD/IE_550_syllabus.PDF). The aim was to simualte and analyze the dynamics of an endangered fish species given different government protective policies.
 
 Click [here](https:///abdulaziz-aldoseri.github.io/files/SD/Project.rar) to download the simulation code (VENSIM) and report.
