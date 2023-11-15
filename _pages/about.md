@@ -14,11 +14,11 @@ Research
 ------
 My main research interests are in the areas of:
 
-1. **Stochastic Optimization**
+**Stochastic Optimization**
 
 I am mainly interested in problems in which sequential decision-making is done in a stochastic environment. I attempted to solve a Natural Gas Storage Problem using Deep RL in my M.S. thesis.
 
-2. **Energy Value-Chain Optimization**
+**Energy Value-Chain Optimization**
 
 On the application side, I am interested in applying OR methods to energy value-chain optimization problems. This includes the whole value chain, with a particular emphasis on mid and down streams.
 
