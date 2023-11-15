@@ -7,8 +7,6 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
-
 Click [here](abdulaziz-aldoseri.github.io/files/Abdulaziz_Aldoseri_Resume.pdf) to download full resume.
 
 Education
