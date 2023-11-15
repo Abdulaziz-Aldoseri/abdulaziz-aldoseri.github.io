@@ -5,9 +5,9 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
+
+You can also find my previous articles on <u><a href="{{https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/}}">my DERASAT profile</a>.</u>
+
 
 {% include base_path %}
 
