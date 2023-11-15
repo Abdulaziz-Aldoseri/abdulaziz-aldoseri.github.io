@@ -6,7 +6,7 @@ author_profile: true
 ---
 
 
-You can find my previous articles on my [DERASAT profile](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/).
+You can find my previous articles on my DERASAT [profile page](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/).
 
 ## Sample essay
 ### System Dynamics and Minsky's Financial Instability Hypothesis
