@@ -13,12 +13,12 @@ This thesis aims to solve the problem of natural gas storage valuation. [Here](h
 
 I will share the source code for the thesis very soon.
 
-## Sample essay
+## Sample Essay
 ### The Minsky Moment from a System Dynamics Perspective
 [This](https:///abdulaziz-aldoseri.github.io/files/SD/Minsky.pdf) is a concise literature review of Minsky's financial instability hypothesis from a system dynamics perspective.
 
 
-## Sample of previous projects
+## Sample of Previous Projects
 **Disclaimer**: _All code is provided as is. There is no warranty that it runs on your platform, or that it will be appropriate to solve your problem. Unfortunately, I will not be able to reply to questions on how to run the code on a particular platform. I would be happy to receive reports on ways to improve the code and potential mistakes. If you end up using the code, please send me an email to let me know what the particular problem you worked on was._
 
 ### Solving the Traveling Salesman with Profit (TSPP) Problem using Ant Colony System (ACS)
