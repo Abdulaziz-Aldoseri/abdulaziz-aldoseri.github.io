@@ -14,8 +14,8 @@ This thesis aims to solve the problem of natural gas storage valuation. [Here](h
 I will share the source code for the thesis very soon.
 
 ## Sample essay
-### System Dynamics and Minsky's Financial Instability Hypothesis
-[This](https:///abdulaziz-aldoseri.github.io/files/SD/Minsky.pdf) is a concise literature review of the financial instability hypothesis from a system dynamics perspective.
+### The Minsky Moment from a System Dynamics Perspective
+[This](https:///abdulaziz-aldoseri.github.io/files/SD/Minsky.pdf) is a concise literature review of Minsky's financial instability hypothesis from a system dynamics perspective.
 
 
 ## Sample of previous projects
