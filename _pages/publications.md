@@ -11,7 +11,7 @@ You can find my previous articles on my DERASAT [profile page](https://www.deras
 ## M.S. Thesis (Work in Progress)
 This thesis aims to solve the problem of natural gas storage valuation. [Here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Proposal.pdf) you can find the thesis proposal.
 
-Below, I will list high-level components of the modeling approach/choice:
+Below, I will list high-level components of the modeling approach/choices:
 * _Algorithmic Implementation_: To benchmark the results obtained and avoid performance variability due to individual implementation. To avoid this short coming, I have used [stable-baselines3]( https://jmlr.org/papers/volume22/20-1364/20-1364.pdf) as my algorithmic library.
 * _Customized Environment_: I have customized a standardized template environment from the [Gymnasium](https://gymnasium.farama.org/index.html) library (formerly known as OpenAI Gym).
 * _Hyper-Parameter Optimization_: Hyper-parameter optimization is based on the [Optuna](https://optuna.org/) framework. This significantly helps the automation and improvement of the search over the hyper-parameters spaces.
