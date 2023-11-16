@@ -42,3 +42,4 @@ This project was part of a graduate-level course on [Agent-Based Modeling](https
 Click [here](https:///abdulaziz-aldoseri.github.io/files/ABM/GroupD.rar) to download the simulation code (NetLogo) and report.
 
 **Disclaimer**: _All code is provided as is. There is no warranty that it runs on your platform, or that it will be appropriate to solve your problem. Unfortunately, I will not be able to reply to questions on how to run the code on a particular platform. I would be happy to receive reports on ways to improve the code and potential mistakes. If you end up using the code, please send me an email to let me know what the particular problem you worked on was._
+{: .notice}
