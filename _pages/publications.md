@@ -15,7 +15,7 @@ Below, I will list high-level components of the modeling approach/choices:
 * _Algorithmic Implementation_: To benchmark the results obtained and avoid performance variability due to individual implementation. To avoid this short coming, I have used [stable-baselines3]( https://jmlr.org/papers/volume22/20-1364/20-1364.pdf) as my algorithmic library.
 * _Customized Environment_: I have customized a standardized template environment from the [Gymnasium](https://gymnasium.farama.org/index.html) library (formerly known as OpenAI Gym).
 * _Hyper-Parameter Optimization_: Hyper-parameter optimization is based on the [Optuna](https://optuna.org/) framework. This significantly helps the automation and improvement of the search over the hyper-parameters spaces.
-* _Financial Data_: I have the spot and front month futures data from [EIA]( https://www.eia.gov/dnav/ng/NG_PRI_FUT_S1_M.htm).
+* _Financial Data_: I used the spot and front month futures data from [EIA]( https://www.eia.gov/dnav/ng/NG_PRI_FUT_S1_M.htm).
 
 (Last update Nov/1/2023) I will share the source code for the thesis very soon!
 
