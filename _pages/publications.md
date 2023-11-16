@@ -32,7 +32,7 @@ This project was part of a graduate-level course on [System Dynamics](https:///a
 Click [here](https:///abdulaziz-aldoseri.github.io/files/SD/Project.rar) to download the simulation code (VENSIM) and report.
 
 ### Evolution of Trust Using Agent-Based Modeling
-This project was part of a graduate-level course on [Agent-Based Modeling](https:///abdulaziz-aldoseri.github.io/files/ABM/Syllabus.pdf). The aim was to simulate and analyze the dynamics of an endangered fish species given different government protective policies.
+This project was part of a graduate-level course on [Agent-Based Modeling](https:///abdulaziz-aldoseri.github.io/files/ABM/Syllabus.pdf). The aim was to simulate and analyze the evolution of trust in an agent-based model given different behavioral. game-theoritic, settings.
 
 Click [here](https:///abdulaziz-aldoseri.github.io/files/ABM/GroupD.rar) to download the simulation code (NetLogo) and report.
 
