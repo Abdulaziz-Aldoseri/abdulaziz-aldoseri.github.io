@@ -11,7 +11,13 @@ You can find my previous articles on my DERASAT [profile page](https://www.deras
 ## M.S. Thesis (Work in Progress)
 This thesis aims to solve the problem of natural gas storage valuation. [Here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Proposal.pdf) you can find the thesis proposal.
 
-I will share the source code for the thesis very soon.
+Below, I will list high-level components of the modeling approach/choice:
+* _Algorithmic Implementation_: To benchmark the results obtained and avoid performance variability due to individual implementation. To avoid this short coming, I have used [stable-baselines3]( https://jmlr.org/papers/volume22/20-1364/20-1364.pdf) as my algorithmic library.
+* _Customized Environment_: I have customized a standardized template environment from the [Gymnasium](https://gymnasium.farama.org/index.html) library (formerly known as OpenAI Gym).
+* _Hyper-parameter Optimization_: Hyper-parameter optimization is based on the [Optuna](https://optuna.org/) framework. This significantly helps the automation and improvement of the search over the hyper-parameters spaces.
+* _Financial Data_: I have the spot and front month futures data from [EIA]( https://www.eia.gov/dnav/ng/NG_PRI_FUT_S1_M.htm).
+
+(Last update Nov/1/2023) I will share the source code for the thesis very soon!
 
 ## Sample Essay
 ### The Minsky Moment from a System Dynamics Perspective
