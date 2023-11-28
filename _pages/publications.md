@@ -26,7 +26,7 @@ Below, I will list high-level components of the modeling approach/choices:
 
 ## Sample of Previous Projects
 
-### Solving the Traveling Salesman with Profit (TSPP) Problem using Ant Colony System (ACS)
+### Solving the Traveling Salesman Problem with Profits (TSPP) using Ant Colony System (ACS)
 This [project](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/Project.pdf) was part of a graduate-level course on [Heuristic Optimization](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/IE_517_syllabus.PDF). The aim was to implement an algorithm to solve multiple instances of the TSPP problem.
 
 Click [here](https:///abdulaziz-aldoseri.github.io/files/TSPP_ACS/TSPP.rar) to download the code (C++), TSPP instances and a short report.
