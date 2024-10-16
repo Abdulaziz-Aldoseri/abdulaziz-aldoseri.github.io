@@ -8,14 +8,13 @@ author_profile: true
 
 My previous articles are on my DERASAT [profile page](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/).
 
-## M.S. Thesis (Work in Progress)
-This thesis aims to solve the problem of natural gas storage valuation. [Here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Proposal.pdf) you can find the thesis proposal.
+## M.S. Thesis - Natural Gas Storage Valuation Using Deep Reinforcement Learning
+This thesis aims to solve the problem of natural gas storage valuation. [Click here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Abdulaziz_Aldoseri_Thesis.pdf) to download it.
 
-Below, I will list high-level components of the modeling approach/choices:
-* _Algorithmic Implementation_: To benchmark the results obtained and avoid performance variability due to implementation variations, I have used [Stable-Baselines3]( https://jmlr.org/papers/volume22/20-1364/20-1364.pdf) as my algorithmic library.
-* _Customized Environment_: I have customized a standardized template environment from the [Gymnasium](https://gymnasium.farama.org/index.html) library (formerly known as OpenAI Gym).
-* _Hyper-Parameter Optimization_: Hyper-parameter optimization is based on the [Optuna](https://optuna.org/) framework. This significantly helps the automation and improvement of the search over the hyper-parameters spaces.
-* _Financial Data_: I used the spot and front month futures data from [EIA]( https://www.eia.gov/dnav/ng/NG_PRI_FUT_S1_M.htm).
+Main highlights of the thesis:
+Demonstrated the viability of Deep Reinforcement Learning for valuing natural gas storage assets, providing energy merchant companies with an innovative tool for investment decision-making and acquisition strategies.
+Developed a DRL model using the SAC algorithm for natural gas storage valuation, leveraging ANNs for high-dimensional decision-making and real price data for accurate trading.
+Validated the model’s performance through formal benchmarking against PPO and TD3, with enhanced reproducibility and decision accuracy.
 
 (Last update Nov/1/2023) I will share the source code for the thesis very soon!
 
