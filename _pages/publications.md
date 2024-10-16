@@ -16,8 +16,6 @@ Main highlights of the thesis:
 * Developed a DRL model using the SAC algorithm for natural gas storage valuation, leveraging ANNs for high-dimensional decision-making and real price data for accurate trading.
 * Validated the model’s performance through formal benchmarking against PPO and TD3, with enhanced reproducibility and decision accuracy.
 
-(Last update Nov/1/2023) I will share the source code for the thesis very soon!
-
 ## Sample Essay
 ### The Minsky Moment from a System Dynamics Perspective
 [This](https:///abdulaziz-aldoseri.github.io/files/SD/Minsky.pdf) is a concise literature review of Minsky's financial instability hypothesis from a system dynamics perspective.
