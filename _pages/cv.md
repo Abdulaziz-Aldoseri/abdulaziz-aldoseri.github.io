@@ -15,7 +15,7 @@ Education
 * M.A. in Economics, SUNY at Binghamton, 2011
 * B.Sc. in Business Information Systems, University of Bahrain, 2008
 
-Work experience
+Work Experience
 ======
 * DERASAT
   * 2020 - Present: Research Associate (on study leave)
