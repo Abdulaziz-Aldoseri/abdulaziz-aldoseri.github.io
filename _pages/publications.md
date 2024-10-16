@@ -9,7 +9,7 @@ author_profile: true
 My previous articles are on my DERASAT [profile page](https://www.derasat.org.bh/research-analysis/experts/abdulaziz-aldosseri/).
 
 ## M.S. Thesis - Natural Gas Storage Valuation Using Deep Reinforcement Learning
-This thesis aims to solve the problem of natural gas storage valuation. [Click here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Abdulaziz_Aldoseri_Thesis.pdf) to download it.
+This thesis aims to solve the problem of natural gas storage valuation. Click [here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Abdulaziz_Aldoseri_Thesis.pdf) to download it.
 
 Main highlights of the thesis:
 * Demonstrated the viability of Deep Reinforcement Learning for valuing natural gas storage assets, providing energy merchant companies with an innovative tool for investment decision-making and acquisition strategies.
