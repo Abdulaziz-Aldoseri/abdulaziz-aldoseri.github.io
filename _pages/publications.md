@@ -12,9 +12,9 @@ My previous articles are on my DERASAT [profile page](https://www.derasat.org.bh
 This thesis aims to solve the problem of natural gas storage valuation. [Click here](https:///abdulaziz-aldoseri.github.io/files/MS_thesis/Abdulaziz_Aldoseri_Thesis.pdf) to download it.
 
 Main highlights of the thesis:
-Demonstrated the viability of Deep Reinforcement Learning for valuing natural gas storage assets, providing energy merchant companies with an innovative tool for investment decision-making and acquisition strategies.
-Developed a DRL model using the SAC algorithm for natural gas storage valuation, leveraging ANNs for high-dimensional decision-making and real price data for accurate trading.
-Validated the model’s performance through formal benchmarking against PPO and TD3, with enhanced reproducibility and decision accuracy.
+* Demonstrated the viability of Deep Reinforcement Learning for valuing natural gas storage assets, providing energy merchant companies with an innovative tool for investment decision-making and acquisition strategies.
+* Developed a DRL model using the SAC algorithm for natural gas storage valuation, leveraging ANNs for high-dimensional decision-making and real price data for accurate trading.
+* Validated the model’s performance through formal benchmarking against PPO and TD3, with enhanced reproducibility and decision accuracy.
 
 (Last update Nov/1/2023) I will share the source code for the thesis very soon!
 
