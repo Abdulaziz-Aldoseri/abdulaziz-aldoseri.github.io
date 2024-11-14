@@ -16,7 +16,7 @@ My main research interests are in the areas of:
 
 **Robust Optimization**
 
-I am primarily interested in data-driven approaches to robust optimization, particularly for sequential decision-making in uncertain environments. In my M.S. thesis, I applied Deep Reinforcement Learning to natural gas storage valuation, focusing on building robust, adaptive strategies under market volatility.
+I am primarily interested in data-driven approaches to robust optimization, particularly for sequential decision-making in uncertain environments.
 
 **Energy Value-Chain Optimization**
 
