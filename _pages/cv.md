@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-Click [here](https://abdulaziz-aldoseri.github.io/files/Abdulaziz_Aldoseri_CV.pdf) to download my CV.
+Click [here](https://abdulaziz-aldoseri.github.io/files/Resume.pdf) to download it.
 
 Education
 ======
