@@ -7,7 +7,7 @@ redirect_from:
   - /resume
 ---
 
-Click [here](https://github.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/files/Resume.pdf) to download it.
+Click [here](https://abdulaziz-aldoseri.github.io/files/Resume.pdf) to download it.
 
 Education
 ======
