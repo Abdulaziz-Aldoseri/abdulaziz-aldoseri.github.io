@@ -1,0 +1,8 @@
+---
+import Site from './Site.astro';
+const { frontmatter } = Astro.props;
+---
+<Site title={frontmatter.title} description={frontmatter.description}>
+  <div class="shell page-heading"><p class="eyebrow">Abdulaziz Aldoseri / {frontmatter.category || 'Background & evidence'}</p><h1>{frontmatter.title}</h1>{frontmatter.intro && <p class="page-intro">{frontmatter.intro}</p>}</div>
+  <article class="shell prose"><slot /></article>
+</Site>

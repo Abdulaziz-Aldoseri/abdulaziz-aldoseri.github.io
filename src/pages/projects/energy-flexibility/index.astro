@@ -1,0 +1,56 @@
+---
+import Site from '../../../layouts/Site.astro';
+import EnergyExplorer from '../../../components/EnergyExplorer';
+import EnergyStudyBrief from '../../../components/EnergyStudyBrief.astro';
+import index from '../../../data/energy-index.json';
+import sensitivity from '../../../data/energy-sensitivity.json';
+---
+<Site title="Can electricity storage reduce daily peaks?" description="An open-data study of electricity storage scheduling: the decisions, forecasts and physical constraints behind peak reduction using Great Britain’s demand data.">
+<div class="shell study-heading">
+  <a class="breadcrumb" href="/projects/">← Decision Lab</a>
+  <p class="eyebrow">01 / Energy &amp; infrastructure · Independent study · 2026</p>
+  <h1>Can electricity storage<br />reduce daily peaks?</h1>
+  <p class="page-intro">Storage draws electricity when charging and supplies it when discharging. The decision is when to do each so that the day’s highest requirement is lower—even though actual demand is unknown when the schedule is set.</p>
+  <p class="study-context">This study adds a hypothetical store to Great Britain’s electricity system. It uses NESO National Demand: a metered-generation requirement excluding station load, pumping and exports. The model schedules storage against a simple forecast, then tests that schedule against actual observations.</p>
+  <div class="study-links"><a href="#model-brief-heading">Understand the model ↓</a><a href="#explorer">Try the scenarios</a><a href="#findings">Results &amp; implications</a><a href="#sources">Data &amp; notebook</a></div>
+</div>
+<EnergyStudyBrief />
+<section class="tint experiment-section" id="explorer"><div class="shell">
+  <div class="explorer-intro">
+    <h2>Try the storage scenarios</h2>
+    <p>Choose a store’s power and duration, then compare schedules for a day. These are evaluated scenarios: the model chooses the half-hour charging and discharging flows for each size. <a href="#model-brief-heading">Review the model and assumptions ↑</a></p>
+    <p><strong>Read the result as a change in the daily peak.</strong> Peak reduction is the highest observed requirement minus the highest requirement after adding the storage schedule. A forecast error can place charging at the wrong time and create a higher peak, giving a negative result.</p>
+  </div>
+  <EnergyExplorer index={index} client:load />
+  <noscript><p>The default evaluated scenario is shown above. Enable JavaScript to change the date or capacity, or download all results below.</p></noscript>
+  <p class="source-credit">Supported by <a href="https://www.neso.energy/data-portal/historic-demand-data">National Energy SO Open Data</a>. Historic Demand Data 2024/2025 · <a href="https://www.neso.energy/data-portal/neso-open-licence">NESO Open Data Licence</a>. Processing and model: Abdulaziz Aldoseri.</p>
+</div></section>
+<section class="section shell study-prose" id="findings">
+  <p class="eyebrow">The decision implication</p>
+  <h2>How the schedule is chosen<br /><span class="serif">matters.</span></h2>
+  <div class="finding-grid">
+    <p class="large-copy">For the fixed solver selection shown above, 1,000 MW and two hours of storage provide <strong>532.1 MW</strong> of average daily peak relief, compared with <strong>514.4 MW</strong> for the rule. That selected schedule raises the actual peak on <strong>15 of 245 days</strong>; the rule does so on none in this test period.</p>
+    <div><p>The forecast objective does not uniquely determine the operating schedule. Different schedules can achieve the same optimal forecast peak and minimum throughput, yet behave differently when actual demand arrives.</p><p>The perfect-information bound averages 964.1 MW of relief. It describes ideal potential. A complete operating policy must also specify how it chooses among equally good forecast solutions.</p></div>
+  </div>
+  <div class="scope-note" id="tie-sensitivity">
+    <p class="eyebrow">Sensitivity check · exploratory</p>
+    <h3>The same forecast objectives can lead to different outcomes.</h3>
+    <p>An adversarial review added a third objective: favour holding energy for longer, while preserving the original optimal forecast peak and minimum throughput. At 1,000 MW/two hours, this alternative selection averaged <strong>{sensitivity.time_based_tie_variants.max_holding_time.mean_mw.toFixed(1)} MW</strong> of relief and raised the peak on <strong>{sensitivity.time_based_tie_variants.max_holding_time.worsened_days} days</strong>. No actual 2025 demand entered that third objective.</p>
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Schedule selection sensitivity"><table><caption>1,000 MW / two hours · same 245 days · sensitivity examined after the primary evaluation</caption><thead><tr><th>Schedule selection</th><th>Mean relief (MW)</th><th>Days worsened</th></tr></thead><tbody><tr><th scope="row">Frozen forecast LP selection</th><td>532.1</td><td>15 / 245</td></tr><tr><th scope="row">Longer holding time, same two objective levels</th><td>{sensitivity.time_based_tie_variants.max_holding_time.mean_mw.toFixed(1)}</td><td>0 / 245</td></tr><tr><th scope="row">Forecast-window rule</th><td>514.4</td><td>0 / 245</td></tr></tbody></table></div>
+    <p><strong>This is a post-hoc diagnostic, not a newly validated policy.</strong> It was investigated after inspecting the original evaluation. Selecting the alternative now and presenting the same days as a fresh test would overstate the evidence. The original interactive schedules remain unchanged.</p>
+    <p>The next step is to define the full schedule-selection rule and evaluate it on fresh data. The diagnostic code, day-level comparison and objective checks are included in the reproduction package.</p>
+  </div>
+  <p class="scope-note">These are retrospective model results for hypothetical additional capacity, not measured benefits from a deployed storage asset or a recommendation for a real operating system.</p>
+</section>
+<section class="section tint" id="method"><div class="shell study-prose">
+  <p class="eyebrow">Evaluation &amp; reproducibility</p>
+  <h2>How the results were checked</h2>
+  <div class="method-grid">
+    <article><span class="number">01</span><h3>A later test period</h3><p>During development, the first 21 days of each 2024 month fit the profile and the remaining 114 days validate it. The final profile fits all of 2024. Evaluation then covers 1 May–31 December 2025: 245 days.</p></article>
+    <article><span class="number">02</span><h3>Keep the adverse days</h3><p>Each day has equal weight in the period average. Negative peak reductions stay in the results. A day counts as worsened when the increase exceeds 0.0001 MW, allowing for numerical noise. Peak reduction in MW is neither energy saved nor money saved.</p></article>
+    <article><span class="number">03</span><h3>Verify every schedule</h3><p>The Python model uses SciPy/HiGHS. Analytic examples, an independent reachability check, information-leakage checks and reconciliation of exported schedules support numerical verification. Clock-change days retain their 46 or 50 real half-hours.</p></article>
+  </div>
+  <p class="scope-note">The annual source files are revised snapshots. This is a chronological retrospective demonstration, not an as-issued operational backtest. Original schedules and results remain frozen; the later schedule-selection sensitivity is identified separately above.</p>
+</div></section>
+<section class="section shell study-prose" id="sources"><p class="eyebrow">Follow the evidence</p><h2>Open data. Reproducible work.</h2><p>National Energy System Operator, Historic Demand Data 2024/2025. Retrieved 14 September 2026. Original snapshots, SHA-256 hashes, transformations and assumptions are included in the reproduction package. The study is independent work by Abdulaziz Aldoseri; source attribution does not imply NESO endorsement.</p><div class="download-grid"><a href="/files/energy/reference_study.ipynb" download><strong>Explore the notebook ↗</strong><span>Jupyter / Google Colab compatible · Python</span></a><a href="/files/energy/energy-flexibility-reproducibility.zip" download><strong>Reproduce the study ↗</strong><span>Code, source data, tests and results · ZIP</span></a><a href="/files/energy/daily_results.csv" download><strong>Inspect every result ↗</strong><span>245 days × 12 capacities × 4 strategies · CSV</span></a></div><p><a href="https://www.neso.energy/data-portal/historic-demand-data">Original dataset</a> · <a href="https://www.neso.energy/data-portal/neso-open-licence">Data licence</a></p><p class="muted">To run in Google Colab, upload the notebook and follow its setup cell. No account or service is needed to explore the evaluated results on this page.</p><a class="text-link" href="/projects/">Back to all projects →</a></section>
+</Site>

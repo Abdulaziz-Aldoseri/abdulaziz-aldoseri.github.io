@@ -1,0 +1,31 @@
+:root {
+  --ink: #0b3439;
+  --muted: #536563;
+  --paper: #f7f3e9;
+  --tint: #eeeade;
+  --line: #ccd2c7;
+  --teal: #08695e;
+  --brand-accent: #f0ba80;
+  --soft-paper: #fcf9f1;
+}
+body { min-height: 100svh; display: flex; flex-direction: column; }
+main { flex: 1; }
+body:not(.home-site) { background: var(--paper); }
+.site-header, .site-footer { background: var(--ink); color: var(--paper); border-color: #36575a; }
+.site-header .monogram span { color: var(--brand-accent); }
+.site-header a:hover, .site-footer a:hover { color: var(--brand-accent); }
+.site-header :focus-visible, .site-footer :focus-visible { outline-color: var(--brand-accent); }
+.site-footer .footer-inner p, .site-footer .footer-links { color: #c1d1ce; }
+.site-footer { padding-block: 27px; }
+.filters input[type=search], .experiment-controls select { background: var(--soft-paper); color: var(--ink); border-color: #71877e; }
+.daily-panel, .month-grid button, .tint .scope-note, .detail-table thead { background: var(--soft-paper); }
+.sector-card { background: var(--soft-paper); }
+.selected-row { background: #e5ecdc; }
+.active-filters button { background: #e0e9d8; }
+.status { background: #dde9d5; color: #24564a; }
+.status.planned { background: #e9e1d2; color: #5c625b; }
+.month-grid button:hover { background: #e5ecdc; }
+.interpretation { background: #e8eee8; border-color: #456970; }
+.interpretation.downside { background: #f6e7d8; border-color: var(--orange); }
+.contact-options { padding-left: 0 !important; }
+.prose .contact-options button { min-height: 44px; }

@@ -1,0 +1,24 @@
+<div class="home-contact-links" role="group" aria-label="Contact links">
+  <span class="email-reveal">
+    <button id="reveal-email" type="button" aria-controls="email-address" hidden>Show email address</button>
+    <a id="email-address" hidden></a>
+    <noscript>For email, enable JavaScript. You can also reach me on LinkedIn.</noscript>
+  </span>
+  <a href="https://www.linkedin.com/in/abdulaziz-aldoseri/">LinkedIn <span aria-hidden="true">↗</span></a>
+  <a href="https://github.com/Abdulaziz-Aldoseri">GitHub <span aria-hidden="true">↗</span></a>
+</div>
+<script>
+  const trigger = document.querySelector<HTMLButtonElement>('#reveal-email');
+  const address = document.querySelector<HTMLAnchorElement>('#email-address');
+  if (trigger && address) {
+    trigger.addEventListener('click', () => {
+      const email = atob('YWJkdWxheml6LmFsZG9zZXJpQGdtYWlsLmNvbQ==');
+      address.textContent = email;
+      address.href = 'mailto:' + email;
+      address.hidden = false;
+      trigger.hidden = true;
+      address.focus();
+    }, { once: true });
+    trigger.hidden = false;
+  }
+</script>

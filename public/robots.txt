@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://abdulaziz-aldoseri.github.io/sitemap.xml

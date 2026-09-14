@@ -1,0 +1,8 @@
+---
+import Site from '../../layouts/Site.astro';
+import ProjectDirectory from '../../components/ProjectDirectory';
+---
+<Site title="Decision Lab — projects" description="Explore decision studies and professional evidence by sector and method: interactive open-data energy and retail studies, a planned mobility study, and earlier research.">
+  <div class="page-heading shell"><h1>Decision Lab</h1><p class="page-intro">Models, interactive studies and published research. Browse by sector, question or method.</p></div>
+  <section class="shell directory-section" aria-label="Project directory"><ProjectDirectory client:load /><noscript><p>Enable JavaScript to filter projects. Every project and its evidence link is listed above.</p></noscript></section>
+</Site>

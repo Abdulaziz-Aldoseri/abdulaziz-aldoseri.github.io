@@ -1,0 +1,39 @@
+<section class="shell model-brief" aria-labelledby="model-brief-heading">
+  <h2 id="model-brief-heading">The scheduling problem</h2>
+  <dl class="model-contract">
+    <div><dt>Decision variables</dt><dd>Choose the net charging or discharging power in every half-hour. Positive flow charges the store; negative flow discharges it. The stored-energy path must stay within the store’s limits.</dd></div>
+    <div><dt>Objective</dt><dd>First minimize the highest forecast requirement after adding the storage schedule. Then minimize total energy moved, counting both charging and discharging, while preserving that best peak within a small numerical tolerance.</dd></div>
+    <div><dt>Information available</dt><dd>A simple profile fitted to 2024 data estimates demand by month, weekday/weekend and London local half-hour. The schedule is fixed before it is tested against actual 2025 demand. Weather and holidays are not forecast inputs.</dd></div>
+    <div><dt>Physical constraints</dt><dd>Charging and discharging share a power limit in MW. Stored energy stays between zero and capacity in MWh. Each day starts and ends empty, so energy must be charged before it can be discharged; none carries into the next day.</dd></div>
+  </dl>
+  <p class="model-control-explanation"><strong>Store size is a scenario input; the optimization chooses its operating schedule.</strong> At 1,000 MW, two hours of duration means 2,000 MWh of capacity: enough to discharge at full power for two hours when full. The optimized charging and discharging periods need not each last two hours.</p>
+  <details class="data-details model-formulation">
+    <summary>Decision variables and equations</summary>
+    <dl class="model-symbols">
+      <div><dt><var>u</var><sub>t</sub> · MW</dt><dd>Net power flow chosen for half-hour <var>t</var>; positive to charge, negative to discharge.</dd></div>
+      <div><dt><var>e</var><sub>t</sub> · MWh</dt><dd>Stored energy at the beginning of the interval. This state variable is linked to the flow by the energy balance.</dd></div>
+      <div><dt><var>z</var> · MW</dt><dd>Peak variable: an upper bound on every forecast value plus the chosen flow. The first objective minimizes it.</dd></div>
+      <div><dt><var>a</var><sub>t</sub> · MW</dt><dd>Auxiliary magnitude, constrained to be at least both <var>u</var><sub>t</sub> and −<var>u</var><sub>t</sub>. The second objective minimizes their half-hour total.</dd></div>
+    </dl>
+    <p>The inputs are forecast <var>f</var><sub>t</sub>, power limit <var>P</var>, and energy capacity <var>E</var> = <var>P</var> × duration. Actual observations are used for evaluation, not as inputs to the forecast schedule. Intervals run from <var>t</var> = 0 to <var>T</var> − 1, with energy states from 0 to <var>T</var>.</p>
+    <ul class="model-equations">
+      <li><var>f</var><sub>t</sub> + <var>u</var><sub>t</sub> ≤ <var>z</var></li>
+      <li>−<var>P</var> ≤ <var>u</var><sub>t</sub> ≤ <var>P</var></li>
+      <li><var>e</var><sub>t+1</sub> = <var>e</var><sub>t</sub> + 0.5 × <var>u</var><sub>t</sub></li>
+      <li>0 ≤ <var>e</var><sub>t</sub> ≤ <var>E</var>; <var>e</var><sub>0</sub> = <var>e</var><sub>T</sub> = 0</li>
+      <li><var>a</var><sub>t</sub> ≥ <var>u</var><sub>t</sub>; <var>a</var><sub>t</sub> ≥ −<var>u</var><sub>t</sub></li>
+    </ul>
+    <p>First minimize <var>z</var>. Then minimize 0.5 × ∑<var>a</var><sub>t</sub>, subject to <var>z</var> ≤ <var>z</var>* + 0.00001 MW. One signed flow represents net charging or discharging; the formulation does not introduce simultaneous charge and discharge decisions.</p>
+    <p>The second objective reduces unnecessary energy movement. It does not price degradation. Equal-peak, equal-throughput schedules can still exist; the displayed outcomes use one fixed solver selection. <a href="#tie-sensitivity">See why this selection matters.</a></p>
+  </details>
+  <div class="strategy-brief">
+    <h3>Four strategies, the same storage limits</h3>
+    <dl class="strategy-list">
+      <div><dt>No additional flexibility</dt><dd>No added charging or discharging. This is the baseline peak.</dd></div>
+      <div><dt>Forecast-window rule</dt><dd>Charge in the lowest-forecast two-hour window preceding a two-hour discharge window around the earliest predicted peak. If no preceding charging window exists, do nothing.</dd></div>
+      <div><dt>Forecast optimization</dt><dd>Choose every half-hour’s flow with the two-stage objective above, using the same forecast as the rule.</dd></div>
+      <div><dt>Perfect-information bound</dt><dd>Optimize with the day’s actual demand known in advance. This gives an ideal benchmark; that information would not be available when planning.</dd></div>
+    </dl>
+  </div>
+  <p class="model-scope"><strong>Scope:</strong> an additional ideal, lossless store at one aggregate GB node. Prices, degradation, emissions, network and ramp limits, reserves and asset availability are omitted. The study measures conditional peak reduction, not investment returns or an operating plan for a real asset.</p>
+</section>

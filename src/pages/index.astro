@@ -1,0 +1,30 @@
+---
+import Site from '../layouts/Site.astro';
+import HomeLabPreview from '../components/HomeLabPreview';
+import ContactLinks from '../components/ContactLinks.astro';
+import energy from '../data/energy-index.json';
+import '../styles/home.css';
+const scenarios = energy.summary
+  .filter(row => row.policy === 'forecast_lp' && row.power_mw === 1000)
+  .map(row => ({ duration: row.duration_h, meanRelief: row.mean_reduction_mw, worsened: row.worsened_days, days: row.days }));
+---
+<Site home description="Abdulaziz Aldoseri — an analyst based in Bahrain, combining research and advisory experience with operations research. Explore his Decision Lab.">
+  <section class="home-hero shell" aria-labelledby="introduction">
+    <div class="home-copy">
+    <p class="eyebrow">Decision Science &amp; Analytics</p>
+    <h1 id="introduction">Abdulaziz<br /><span class="serif">Aldoseri.</span></h1>
+    <div class="home-bio">
+      <p>I’m an analyst based in Bahrain. I combine experience in economic research and advisory work with operations research to examine decisions, constraints and uncertainty.</p>
+      <p>My Decision Lab is where I explore these questions through models, interactive studies and open data.</p>
+    </div>
+    <a class="button home-lab-button" href="/projects/">Explore the Decision Lab <span aria-hidden="true">↗</span></a>
+    </div>
+    <HomeLabPreview scenarios={scenarios} client:load />
+  </section>
+  <footer slot="footer" class="site-footer home-contact">
+    <div class="shell home-contact-inner">
+      <h2 id="contact" tabindex="-1">Get in touch.</h2>
+      <ContactLinks />
+    </div>
+  </footer>
+</Site>

@@ -1,0 +1,125 @@
+{
+  "classification": "POST-HOC exploratory diagnostic; not an independently validated policy comparison",
+  "third_objective": "H = delta * sum(e[t+1]) = delta^2 * sum((T-t)*u[t]), t=0..T-1; delta=0.5h. Minimize or maximize H only after preserving both frozen objective levels.",
+  "holding_unit": "MWh h",
+  "peak_constraint": "forecast_peak <= primary_stage1_peak + 0.00001 MW",
+  "throughput_constraint": "absolute throughput <= primary minimum throughput; no added throughput slack",
+  "scenario": {
+    "power_mw": 1000,
+    "energy_capacity_mwh": 2000,
+    "duration_h": 2,
+    "test_days": 245
+  },
+  "default_capacity_dispersion": {
+    "forecast_lp": {
+      "mean_mw": 532.0995825411069,
+      "sample_sd_mw": 355.9348098728138,
+      "q10_mw": 93.7652113913035,
+      "q90_mw": 925.3518533540373,
+      "worsened_days": 15
+    },
+    "rule": {
+      "mean_mw": 514.4122448979592,
+      "sample_sd_mw": 367.101559200558,
+      "q10_mw": 0.0,
+      "q90_mw": 1000.0,
+      "worsened_days": 0
+    }
+  },
+  "time_based_tie_variants": {
+    "min_holding_time": {
+      "mean_mw": 532.0995825411069,
+      "worsened_days": 15,
+      "worst": {
+        "date": "2025-08-30",
+        "reduction_mw": -943.2777877777771
+      }
+    },
+    "max_holding_time": {
+      "mean_mw": 595.8237277671194,
+      "worsened_days": 0,
+      "worst": {
+        "date": "2025-06-07",
+        "reduction_mw": 0.0
+      }
+    }
+  },
+  "tie_variant_distinct_lp_solves": 34,
+  "analytic_tie_counterexample": [
+    {
+      "flow": [
+        2.0,
+        0.0,
+        -2.0
+      ],
+      "forecast_peak": 12.0,
+      "throughput_mwh": 2.0,
+      "actual_peak": 16.0,
+      "relief_mw": -2.0
+    },
+    {
+      "flow": [
+        0.0,
+        2.0,
+        -2.0
+      ],
+      "forecast_peak": 12.0,
+      "throughput_mwh": 2.0,
+      "actual_peak": 14.0,
+      "relief_mw": 0.0
+    }
+  ],
+  "max_absolute_objective_and_physical_residuals": {
+    "peak_cap_excess_mw": 3.385357557909234e-12,
+    "planned_peak_difference_mw": 0.0,
+    "throughput_difference_mwh": 0.0,
+    "physical_max_violation": 0.0
+  },
+  "rule_can_worsen_counterexample": {
+    "forecast": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "actual": [
+      5.0,
+      5.0,
+      5.0,
+      5.0,
+      0.0,
+      4.0,
+      4.0,
+      4.0,
+      4.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "flow": [
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      -2.0,
+      -2.0,
+      -2.0,
+      -2.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "actual_peak_before": 5.0,
+    "actual_peak_after": 7.0
+  },
+  "scope": "Third-objective formulas were investigated after inspecting the frozen evaluation. Their construction uses forecast and time only; selecting one now would be post-hoc selection. Neither replaces the frozen primary policy or establishes future performance."
+}
