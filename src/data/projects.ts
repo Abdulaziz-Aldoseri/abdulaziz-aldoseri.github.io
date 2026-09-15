@@ -1,8 +1,11 @@
-export type Project = { id: string; title: string; question: string; sector: string[]; area: string[]; method: string[]; provenance: string; status: string; source: string; href: string; action: string; authors?: string };
+import { studies, type StudyDisplay } from './studies';
+export type Project = { id: string; title: string; question: string; sector: string[]; area: string[]; method: string[]; provenance: 'Independent study' | 'MSc thesis' | 'Graduate coursework' | 'Professional work'; status: 'Planned study' | 'Interactive study' | 'Research evidence' | 'Published study'; source: string; href: string; action: string; authors?: string };
 export const projects: Project[] = [
   { id:'energy', title:'Can electricity storage reduce daily peaks?', question:'Decide when an ideal electricity store should charge and discharge. Compare a simple rule with optimization, and see how storage size and forecast errors affect daily peaks.', sector:['Energy & infrastructure'], area:['Capacity planning','Uncertainty'], method:['Linear optimization','Scenario analysis'], provenance:'Independent study', status:'Interactive study', source:'Great Britain · NESO · 2024–25', href:'/projects/energy-flexibility/', action:'Explore the study' },
-  { id:'mobility', title:'Where should rebalancing effort go?', question:'A planned allocation study using London bicycle flows: decide where a limited number of moves can address uneven flows across stations.', sector:['Transport & mobility'], area:['Resource allocation'], method:['Planned: integer optimization'], provenance:'Independent study', status:'Planned study', source:'London · TfL · 2026', href:'/projects/mobility-rebalancing/', action:'Read the study scope' },
+  { id:'mobility', title:'Where should rebalancing effort go?', question:'Allocate a limited number of bicycle moves across London stations. Explore which stations to involve and how the plan holds up against later morning flows.', sector:['Transport & mobility'], area:['Resource allocation'], method:['Integer optimization','Forecast evaluation'], provenance:'Independent study', status:'Interactive study', source:'London · TfL · 2026', href:'/projects/mobility-rebalancing/', action:'Explore the study' },
   { id:'retail', title:'Which products get the next unit?', question:'Allocate a shared unit budget across 30 products. Explore shortfall priorities, protected quantities and what holds up against later recorded activity.', sector:['Retail & commerce'], area:['Resource allocation','Uncertainty'], method:['Stochastic optimization','Integer allocation'], provenance:'Independent study', status:'Interactive study', source:'UK retailer · UCI · 2009–11', href:'/projects/retail-allocation/', action:'Explore the study' },
+  { id:'airline', title:'Which aircraft mix covers the service plan?', question:'Size a mixed aircraft fleet against route coverage and monthly operating-hour limits. Explore how service targets change the required mix, and when a fleet cap makes the plan infeasible.', sector:['Airline industry'], area:['Capacity planning','Resource allocation'], method:['Integer optimization','Scenario analysis'], provenance:'Independent study', status:'Interactive study', source:'Denver regional routes · US BTS · 2025', href:'/projects/airline-fleet/', action:'Explore the study' },
+  { id:'telecom', title:'How should staff be shared across telecom casework?', question:'Allocate a cross-trained team across three work queues. Use FCC complaint intake and hypothetical processing capacity to explore balanced coverage, flexibility and the backlog that remains.', sector:['Telecom & services'], area:['Resource allocation','Capacity planning'], method:['Integer optimization','Forecast evaluation','Simulation'], provenance:'Independent study', status:'Interactive study', source:'US regulator complaint intake · FCC · 2025', href:'/projects/telecom-staff/', action:'Explore the study' },
   { id:'storage', title:'Valuing operating flexibility in gas storage', question:'A reinforcement-learning approach to storage valuation. The policy learned in training but did not generalize to the 2023 validation data.', sector:['Energy & infrastructure'], area:['Valuation','Uncertainty'], method:['Reinforcement learning'], provenance:'MSc thesis', status:'Research evidence', source:'Boğaziçi University · 2024', href:'/projects/evidence/#energy-asset-valuation', action:'Read findings and thesis' },
   { id:'routing', title:'Balancing route profit and travel cost', question:'An Ant Colony System heuristic for the Travelling Salesman Problem with Profits, evaluated on six coursework instances. No proof of optimality.', sector:['Cross-sector methods'], area:['Routing','Resource allocation'], method:['Heuristic optimization'], provenance:'Graduate coursework', status:'Research evidence', source:'Boğaziçi University · C++', href:'/projects/evidence/#routing-and-logistics-modelling', action:'View code and report' },
   { id:'fishing', title:'Exploring fishing-policy trade-offs', question:'A coauthored system-dynamics model of population recovery. Protection of mature females supported recovery within the simulated scenarios.', sector:['Environment'], area:['Policy evaluation','Uncertainty'], method:['System dynamics'], provenance:'Graduate coursework', status:'Research evidence', source:'Boğaziçi University · 2022 · Vensim', href:'/projects/evidence/#fishing-policy-simulation', action:'View model and report' },
@@ -11,3 +14,25 @@ export const projects: Project[] = [
   { id:'electricity', title:'Preparing for GCC electricity trading', question:'Coauthored professional analysis of commercial and regulatory barriers, with recommendations for market preparedness.', sector:['Energy & infrastructure'], area:['Market analysis','Policy evaluation'], method:['Comparative analysis'], provenance:'Professional work', status:'Published study', source:'DERASAT · 2018', href:'https://derasat.org.bh/wp-content/uploads/2019/01/Energy-Report-1-EN.pdf', action:'Read the published report', authors:'Abdulla Al-Abbasi and Abdulaziz Al-Dosari' },
   { id:'environment', title:'Environmental research in Bahrain', question:'A coauthored qualitative study drawing on interviews with 14 experts to inform environmental recommendations.', sector:['Environment'], area:['Policy evaluation'], method:['Qualitative analysis'], provenance:'Professional work', status:'Published study', source:'DERASAT · 2021', href:'https://www.derasat.org.bh/wp-content/uploads/2021/08/The-Impact-of-Covid-19-on-the-Environment-in-Bahrain.pdf', action:'Read the published report', authors:'Ghada Abdulla, Abdulaziz Al-Doseri, Deema Almoayyed and Omar Al-Ubaydli' },
 ];
+
+// Display identity and evidence status have one owner. New planned work cannot
+// acquire an interactive badge or method filters by copying an evaluated card.
+for (const project of projects) {
+  if (project.provenance !== 'Independent study') continue;
+  const study = (studies as Record<string, StudyDisplay>)[project.id];
+  if (!study) throw new Error(`Missing study display contract: ${project.id}`);
+  project.title = study.title;
+  project.sector = [study.sector];
+  project.href = study.route;
+  if (study.evidence.stage === 'planned') {
+    project.status = 'Planned study';
+    project.method = [];
+    project.action = 'Read the proposed scope';
+  } else {
+    if (!study.evidence.evidenceVersion || !study.evidence.independentlyReviewed) {
+      throw new Error(`Study evidence has not passed its review gate: ${project.id}`);
+    }
+    project.status = 'Interactive study';
+    project.action = 'Explore the study';
+  }
+}

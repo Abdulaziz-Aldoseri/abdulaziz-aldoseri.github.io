@@ -1,11 +1,7 @@
-<section class="shell model-brief" aria-labelledby="model-brief-heading">
-  <h2 id="model-brief-heading">The scheduling problem</h2>
-  <dl class="model-contract">
-    <div><dt>Decision variables</dt><dd>Choose the net charging or discharging power in every half-hour. Positive flow charges the store; negative flow discharges it. The stored-energy path must stay within the store’s limits.</dd></div>
-    <div><dt>Objective</dt><dd>First minimize the highest forecast requirement after adding the storage schedule. Then minimize total energy moved, counting both charging and discharging, while preserving that best peak within a small numerical tolerance.</dd></div>
-    <div><dt>Information available</dt><dd>A simple profile fitted to 2024 data estimates demand by month, weekday/weekend and London local half-hour. The schedule is fixed before it is tested against actual 2025 demand. Weather and holidays are not forecast inputs.</dd></div>
-    <div><dt>Physical constraints</dt><dd>Charging and discharging share a power limit in MW. Stored energy stays between zero and capacity in MWh. Each day starts and ends empty, so energy must be charged before it can be discharged; none carries into the next day.</dd></div>
-  </dl>
+---
+import DecisionBrief from './DecisionBrief.astro';
+---
+<DecisionBrief id="model-brief-heading" title="The scheduling problem" class="" items={[{"label": "Decision variables", "text": "Choose the net charging or discharging power in every half-hour. Positive flow charges the store; negative flow discharges it. The stored-energy path must stay within the store’s limits."}, {"label": "Objective", "text": "First minimize the highest forecast requirement after adding the storage schedule. Then minimize total energy moved, counting both charging and discharging, while preserving that best peak within a small numerical tolerance."}, {"label": "Information available", "text": "A simple profile fitted to 2024 data estimates demand by month, weekday/weekend and London local half-hour. The schedule is fixed before it is tested against actual 2025 demand. Weather and holidays are not forecast inputs."}, {"label": "Physical constraints", "text": "Charging and discharging share a power limit in MW. Stored energy stays between zero and capacity in MWh. Each day starts and ends empty, so energy must be charged before it can be discharged; none carries into the next day."}]}>
   <p class="model-control-explanation"><strong>Store size is a scenario input; the optimization chooses its operating schedule.</strong> At 1,000 MW, two hours of duration means 2,000 MWh of capacity: enough to discharge at full power for two hours when full. The optimized charging and discharging periods need not each last two hours.</p>
   <details class="data-details model-formulation">
     <summary>Decision variables and equations</summary>
@@ -36,4 +32,4 @@
     </dl>
   </div>
   <p class="model-scope"><strong>Scope:</strong> an additional ideal, lossless store at one aggregate GB node. Prices, degradation, emissions, network and ramp limits, reserves and asset availability are omitted. The study measures conditional peak reduction, not investment returns or an operating plan for a real asset.</p>
-</section>
+</DecisionBrief>

@@ -1,11 +1,7 @@
-<section class="shell model-brief retail-brief" aria-labelledby="retail-model">
-  <h2 id="retail-model">The allocation problem</h2>
-  <dl class="model-contract">
-    <div><dt>The decision</dt><dd>At the start of a week, choose a whole number of units for each of 30 products. The product list is selected from the training period and stays fixed, including products with no later recorded activity.</dd></div>
-    <div><dt>The objective</dt><dd>Minimize expected shortfall and leftover units across past weekly scenarios. Shortfall priority is a preference: at 80%, a shortfall unit receives four times the weight of a leftover unit.</dd></div>
-    <div><dt>The information</dt><dd>Use only complete earlier weeks. Past positive invoice quantities estimate the range of activity to plan for; the following week’s recorded activity is used to evaluate the allocation.</dd></div>
-    <div><dt>The constraints</dt><dd>Total allocated units cannot exceed the shared budget. Quantities are nonnegative integers. An optional product minimum reserves units within that same budget; an impossible minimum is reported as infeasible.</dd></div>
-  </dl>
+---
+import DecisionBrief from './DecisionBrief.astro';
+---
+<DecisionBrief id="retail-model" title="The allocation problem" class="retail-brief" items={[{"label": "The decision", "text": "At the start of a week, choose a whole number of units for each of 30 products. The product list is selected from the training period and stays fixed, including products with no later recorded activity."}, {"label": "The objective", "text": "Minimize expected shortfall and leftover units across past weekly scenarios. Shortfall priority is a preference: at 80%, a shortfall unit receives four times the weight of a leftover unit."}, {"label": "The information", "text": "Use only complete earlier weeks. Past positive invoice quantities estimate the range of activity to plan for; the following week’s recorded activity is used to evaluate the allocation."}, {"label": "The constraints", "text": "Total allocated units cannot exceed the shared budget. Quantities are nonnegative integers. An optional product minimum reserves units within that same budget; an impossible minimum is reported as infeasible."}]}>
   <p class="model-control-explanation"><strong>The budget and priority are scenario inputs.</strong> A 100% budget equals the rounded total of the preceding eight-week mean quantities. All products consume one unit of this abstract resource per item. This does not measure warehouse space, stock on hand or money available.</p>
   <details class="data-details model-formulation">
     <summary>Variables, objective and solution method</summary>
@@ -30,4 +26,4 @@
     </dl>
   </div>
   <p class="model-scope"><strong>Scope:</strong> a one-week allocation exercise using an unnamed UK retailer’s 2009–2011 records. Positive invoices can later be cancelled and may reflect unobserved availability. Shortfall is against recorded activity, not measured lost sales. There is no inventory carry-over, replenishment lead time or claim of business savings.</p>
-</section>
+</DecisionBrief>

@@ -1,0 +1,13 @@
+---
+import type { StudyDisplay } from '../data/studies';
+interface Props { study: StudyDisplay }
+const { study } = Astro.props;
+---
+<div class="shell study-heading" data-study={study.id} data-template-version={study.templateVersion}>
+  <a class="breadcrumb" href="/projects/">← Decision Lab</a>
+  <p class="eyebrow">{String(study.order).padStart(2, '0')} / {study.sector} · {study.evidence.stage === 'planned' ? 'Planned study' : 'Independent study'} · {study.year}</p>
+  <h1>{study.title}</h1>
+  <p class="page-intro">{study.introduction}</p>
+  <p class="study-context">{study.context}</p>
+  <nav class="study-links" aria-label="Study sections">{study.sections.map(section => <a href={`#${section.id}`}>{section.label}</a>)}</nav>
+</div>

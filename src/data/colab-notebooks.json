@@ -1,0 +1,67 @@
+{
+  "energy": {
+    "colabUrl": "https://colab.research.google.com/github/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/public/notebooks/energy.ipynb",
+    "notebookPath": "/notebooks/energy.ipynb",
+    "notebookSha256": "a2048c7f8af722a6b20ccd62a666a5e8c6b7315b54f61d32162e26102b05b0f2",
+    "packageUrl": "https://raw.githubusercontent.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/master/public/files/energy/energy-flexibility-reproducibility.zip",
+    "packagePath": "/files/energy/energy-flexibility-reproducibility.zip",
+    "packageBytes": 3722765,
+    "packageSha256": "d17cfc20507db6985aba37ae6c17a9c592b5c3387a69e3932eaffbdd85f0e424",
+    "scientificNotebookPath": "/files/energy/reference_study.ipynb",
+    "scientificNotebookSha256": "4aa8eba6e78d2e91d864defb45809520029d3ec4e455d343bf82617d0d330eb0",
+    "deliveryVersion": "1.0.0",
+    "hostedColabExecutionVerified": false
+  },
+  "mobility": {
+    "colabUrl": "https://colab.research.google.com/github/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/public/notebooks/mobility.ipynb",
+    "notebookPath": "/notebooks/mobility.ipynb",
+    "notebookSha256": "1356ad76a9586dccd7a04f1172ae1cab93854f1358ceecc58b0c2db8b6ec9b34",
+    "packageUrl": "https://raw.githubusercontent.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/master/public/files/mobility/mobility-rebalancing-reproducibility.zip",
+    "packagePath": "/files/mobility/mobility-rebalancing-reproducibility.zip",
+    "packageBytes": 1716248,
+    "packageSha256": "d563271a3981d051d0c4c59dfbe5ee13d0764550b4a173b40e29996f89adb0a9",
+    "scientificNotebookPath": "/files/mobility/mobility_rebalancing.ipynb",
+    "scientificNotebookSha256": "b86d6c9815d9db31624b12789d7a4fb6e15ea3a84602541ea84471261d5c9a2b",
+    "deliveryVersion": "1.0.0",
+    "hostedColabExecutionVerified": false
+  },
+  "retail": {
+    "colabUrl": "https://colab.research.google.com/github/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/public/notebooks/retail.ipynb",
+    "notebookPath": "/notebooks/retail.ipynb",
+    "notebookSha256": "fa2abe67283463073f38d6e3c5678f179ac1ca0be742d268fb2287f461b5029e",
+    "packageUrl": "https://raw.githubusercontent.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/master/public/files/retail/retail-allocation-reproducibility.zip",
+    "packagePath": "/files/retail/retail-allocation-reproducibility.zip",
+    "packageBytes": 434338,
+    "packageSha256": "bb576dcbf4af6f79f6d81cd22fba27687d17422ecced9fdabaaf21a148865185",
+    "scientificNotebookPath": "/files/retail/retail_allocation.ipynb",
+    "scientificNotebookSha256": "7f994ed05e1e8d6baf20b4ef6c165e1114e3840c1ec5ddc4c4a826ea9770899b",
+    "deliveryVersion": "1.0.0",
+    "hostedColabExecutionVerified": false
+  },
+  "airline": {
+    "colabUrl": "https://colab.research.google.com/github/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/public/notebooks/airline.ipynb",
+    "notebookPath": "/notebooks/airline.ipynb",
+    "notebookSha256": "e40602e65d445d8acdd7d0edf905fcc6ede560fe4ce6b85720ddbf6afec1f2ea",
+    "packageUrl": "https://raw.githubusercontent.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/master/public/files/airline/airline-fleet-reproducibility.zip",
+    "packagePath": "/files/airline/airline-fleet-reproducibility.zip",
+    "packageBytes": 407961,
+    "packageSha256": "8fecdfcd04b0d8ca3db4427ca38b71fc9feb6cd66bb195a8247321ba04dd5010",
+    "scientificNotebookPath": "/files/airline/airline_fleet.ipynb",
+    "scientificNotebookSha256": "1da9151ab3cbd56d4f22277a6d7f3498b6dec51d69fea20df10242c0ded6fe57",
+    "deliveryVersion": "1.0.0",
+    "hostedColabExecutionVerified": false
+  },
+  "telecom": {
+    "colabUrl": "https://colab.research.google.com/github/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/public/notebooks/telecom.ipynb",
+    "notebookPath": "/notebooks/telecom.ipynb",
+    "notebookSha256": "60560cbf42ae8dd065d682b8fab781bd7ad5bec9198506549ea9d20676a96236",
+    "packageUrl": "https://raw.githubusercontent.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/master/public/files/telecom/telecom-staff-reproducibility.zip",
+    "packagePath": "/files/telecom/telecom-staff-reproducibility.zip",
+    "packageBytes": 512303,
+    "packageSha256": "f765b078606a389fb7b17fe629179f50ac284bec03c9880d4c944cebb36994ef",
+    "scientificNotebookPath": "/files/telecom/telecom_staff.ipynb",
+    "scientificNotebookSha256": "763c7de6364eab7f2df245c74c53a5c2d42e3172386014db6871f1483268dc16",
+    "deliveryVersion": "1.0.0",
+    "hostedColabExecutionVerified": false
+  }
+}

@@ -1,0 +1,76 @@
+.mobility-brief dd { font-size:1rem; }
+.mobility-tool { border:0; padding:0; margin:0; min-width:0; }
+.mobility-inspect { scroll-margin-top:24px; }
+.mobility-live { scroll-margin-top:24px; }
+.mobility-period-reference { max-width:360px; margin-top:20px; }
+.mobility-explorer { padding-block:40px 48px; }
+.mobility-explorer .explorer-intro { max-width:900px; }
+.mobility-explorer p { line-height:1.65; }
+.mobility-controls { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:22px; border:0; padding:0; margin:28px 0 0; min-width:0; }
+.mobility-tool label { display:grid; gap:8px; min-width:0; font-size:.9375rem; font-weight:600; }
+.mobility-tool select { width:100%; max-width:100%; min-height:48px; padding:11px 12px; border:1px solid #71877e; border-radius:3px; background:var(--soft-paper); color:var(--ink); font:inherit; text-overflow:ellipsis; }
+.mobility-protection { margin-top:20px; padding-block:16px; border-bottom:1px solid var(--line); }
+.mobility-protection summary { cursor:pointer; min-height:32px; font-weight:600; }
+.mobility-protection label { margin-top:16px; max-width:680px; }
+.mobility-protection p,.mobility-small { font-size:.875rem; color:var(--muted); }
+.mobility-live { margin-block:22px; font-size:.9375rem; }
+.mobility-kpis { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+.mobility-kpis>div { background:var(--soft-paper); border-top:3px solid var(--teal); padding:22px; }
+.mobility-kpis>div:nth-child(2) { border-color:#a54a25; }
+.mobility-kpis span,.mobility-kpis small { display:block; color:var(--muted); font-size:.875rem; }
+.mobility-kpis strong { display:block; font-size:clamp(2rem,3vw,2.8rem); font-weight:500; margin-block:8px; font-variant-numeric:tabular-nums; }
+.mobility-kpis strong small { display:inline; font-size:1.15rem; }
+.mobility-decision-note { border-left:3px solid var(--teal); padding-left:20px; margin-block:26px; max-width:980px; }
+.mobility-transfer-panel,.mobility-panel { background:var(--soft-paper); border:1px solid var(--line); padding:26px; margin-top:28px; }
+.mobility-panel h3,.mobility-panel-heading h3 { font-size:1.5rem; }
+.mobility-panel>p,.mobility-panel-heading p { font-size:.9375rem; color:var(--muted); margin-top:12px; }
+.mobility-transfer-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:28px; }
+.mobility-transfer-side h4 { display:flex; justify-content:space-between; gap:16px; border-bottom:1px solid var(--line); padding-bottom:16px; font-size:1.05rem; }
+.mobility-transfer-side h4 span { color:#944326; }
+.mobility-transfer-side.add h4 span { color:var(--teal); }
+.mobility-transfer-side ol { list-style:none; padding:0; margin:20px 0; display:grid; gap:18px; }
+.mobility-transfer-side li { min-width:0; }
+.mobility-transfer-side button { display:flex; justify-content:space-between; gap:20px; text-align:left; border:0; padding:4px 0 8px; width:100%; min-height:44px; background:transparent; color:var(--ink); cursor:pointer; font:inherit; font-size:.9rem; }
+.mobility-transfer-side button:hover span { text-decoration:underline; text-underline-offset:4px; }
+.mobility-transfer-side strong { font-weight:600; white-space:nowrap; }
+.mobility-transfer-track { height:6px; background:#e8e5d9; }
+.mobility-transfer-track span { display:block; height:100%; background:#a54a25; }
+.mobility-transfer-side.add .mobility-transfer-track span { background:var(--teal); }
+.mobility-conservation { border-top:1px solid var(--line); padding-top:20px; text-align:center; font-size:1rem; font-weight:600; }
+.mobility-conservation span { font-weight:400; color:var(--muted); }
+.mobility-tool table { font-size:.875rem; }
+.mobility-tool th small { display:block; margin-top:5px; font-weight:400; }
+.mobility-tool .table-wrap { margin-bottom:0; }
+.mobility-tool .selected-policy { background:#e3ebe1; }
+.mobility-inspect label { max-width:680px; margin-top:22px; }
+.mobility-station-stats { display:grid; grid-template-columns:repeat(5,1fr); gap:20px; margin-top:24px; }
+.mobility-station-stats span { display:block; font-size:.8rem; color:var(--muted); line-height:1.45; }
+.mobility-station-stats strong { display:block; font-size:1.5rem; margin-top:12px; font-weight:500; }
+.mobility-curve { margin-block:24px 12px; display:grid; gap:17px; max-width:900px; }
+.mobility-curve>div { display:grid; grid-template-columns:90px 1fr 64px; align-items:center; gap:16px; font-size:.875rem; }
+.mobility-curve>div>div { height:14px; background:#e8e5d9; }
+.mobility-curve i { display:block; height:100%; background:var(--teal); }
+.mobility-curve strong { text-align:right; font-weight:500; }
+.mobility-period { margin-top:44px; padding-top:34px; border-top:1px solid var(--line); }
+.mobility-period h3 { font-size:1.8rem; }
+.mobility-period>p { margin-top:16px; max-width:960px; }
+.mobility-day-strip { display:grid; grid-template-columns:repeat(7,1fr); gap:9px; margin-block:24px; }
+.mobility-day-strip button { min-width:0; min-height:76px; padding:10px 4px; background:#e5ecdc; color:var(--ink); border:1px solid #71877e; cursor:pointer; }
+.mobility-day-strip button.worse { background:#f6e7d8; }
+.mobility-day-strip button[aria-pressed=true] { outline:2px solid var(--teal); outline-offset:2px; }
+.mobility-day-strip span,.mobility-day-strip strong { display:block; font-size:.875rem; }
+.mobility-day-strip strong { margin-top:9px; font-weight:600; }
+.mobility-text-button { border:0; border-bottom:1px solid var(--teal); min-height:44px; background:transparent; padding:8px 0; color:var(--teal); font:inherit; cursor:pointer; text-align:left; }
+.mobility-network { margin-top:28px; }
+.mobility-technical p { font-size:1rem; }
+@media(max-width:900px) { .mobility-station-stats { grid-template-columns:repeat(3,1fr); } }
+@media(max-width:680px) {
+ .mobility-controls,.mobility-kpis,.mobility-transfer-grid { grid-template-columns:1fr; gap:18px; }
+ .mobility-kpis>div { padding:18px 20px; }
+ .mobility-panel,.mobility-transfer-panel { padding:22px 16px; }
+ .mobility-transfer-grid { gap:26px; }
+ .mobility-day-strip { grid-template-columns:repeat(3,1fr); }
+ .mobility-station-stats { grid-template-columns:repeat(2,1fr); gap:22px 14px; }
+ .mobility-curve>div { grid-template-columns:66px 1fr 46px; gap:10px; font-size:.8125rem; }
+ .mobility-conservation span { display:block; }
+}

@@ -1,4 +1,7 @@
 ---
+import StudyHeader from '../../../components/StudyHeader.astro';
+import StudyEvidence from '../../../components/StudyEvidence.astro';
+import { studies } from '../../../data/studies';
 import Site from '../../../layouts/Site.astro';
 import RetailStudyBrief from '../../../components/RetailStudyBrief.astro';
 import RetailExplorer from '../../../components/RetailExplorer';
@@ -9,19 +12,12 @@ const compare = retail.comparisons.find(r => r.factor === 1 && r.priority === 0.
 const fmt = (v: number) => new Intl.NumberFormat('en-GB', { maximumFractionDigits: 1 }).format(v);
 ---
 <Site title="Which products get the next unit? — retail allocation" description="Explore a constrained retail allocation decision: uncertain invoice activity, shortfall priorities and a shared unit budget. An independent study using UCI Online Retail II.">
-  <div class="shell study-heading">
-    <a class="breadcrumb" href="/projects/">← Decision Lab</a>
-    <p class="eyebrow">03 / Retail &amp; commerce · Independent study · 2026</p>
-    <h1>Which products get<br />the next unit?</h1>
-    <p class="page-intro">With a limited allowance of product units, how should a retailer divide them before seeing the week’s activity? Explore how the allocation changes when avoiding shortfalls matters more than avoiding leftovers.</p>
-    <p class="study-context">This historical experiment uses 2009–2011 invoice records from an unnamed UK giftware retailer. Earlier weeks supply activity scenarios for 30 fixed products. The model chooses whole-unit allocations, then compares them with recorded activity in a later week.</p>
-    <div class="study-links"><a href="#retail-model">Understand the decision ↓</a><a href="#retail-explorer">Try an allocation</a><a href="#retail-period">Across all test weeks</a><a href="#sources">Data &amp; notebook</a></div>
-  </div>
+  <StudyHeader study={studies.retail} />
   <RetailStudyBrief />
   <section class="tint retail-explorer" id="retail-explorer"><div class="shell">
     <div class="explorer-intro"><h2>Allocate the next week’s allowance</h2><p>Choose a week, a unit budget and how strongly to prioritize shortfalls. The model chooses the allocation. <a href="#retail-model">Review the decision and assumptions ↑</a></p><p>Shortfall and leftover are counted separately for each product. They compare allocation with recorded positive invoice activity; they are not observed lost sales or unsold stock.</p></div>
     <RetailExplorer index={retail} client:load />
-    <noscript><p>The default evaluated scenario is displayed. Enable JavaScript to explore other weeks, priorities and product minima, or inspect the full CSV below.</p></noscript>
+    <noscript><p>The default evaluated scenario is displayed. Enable JavaScript to explore other weeks, priorities and product minima, or inspect complete results in the Colab notebook below.</p></noscript>
     <p class="source-credit">Data: Daqing Chen, <a href="https://archive.ics.uci.edu/dataset/502/online+retail+ii">Online Retail II, UCI</a> · <a href="https://doi.org/10.24432/C5CG6D">DOI 10.24432/C5CG6D</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Filtered UK-customer subset, overlap handling, training-only selection and weekly aggregation. Model: Abdulaziz Aldoseri. No endorsement is implied.</p>
   </div></section>
   <section class="section shell study-prose retail-technical" id="findings">
@@ -38,5 +34,8 @@ const fmt = (v: number) => new Intl.NumberFormat('en-GB', { maximumFractionDigit
     <details class="data-details"><summary>Preparation ledger and sensitivity results</summary><p>Source: 1,067,371 lines in two sheets. Removing the matching 22,523-line overlap leaves 1,044,848. Ordered filters retain UK customer country, positive quantity and price, non-cancellation invoices, a description and a merchandise-code proxy: 935,027 lines across 4,866 codes. At least 26 active training weeks are required; the top 30 eligible products are selected using training quantities, invoice count and code order.</p><p>Reversal matching is a conservative heuristic, using strictly later cancellations with matching product, customer, price and quantity within the same week. Ambiguous pairings are left unmatched. It does not reconstruct physical returns or verified fulfilment.</p><div class="table-wrap" tabindex="0" role="region" aria-label="Alternative activity target results"><table><caption>Reference budget and priority · scenario allocation · each target defined separately</caption><thead><tr><th>Activity target</th><th>Mean weighted mismatch</th><th>Mean shortfall</th><th>Mean leftover</th></tr></thead><tbody>{retail.sensitivities.filter(r=>r.factor===1 && r.priority===0.8 && r.policy==='scenario').map(r=><tr><th scope="row">{{primary_units:'Primary positive invoices',deduplicated_units:'Exact repeats collapsed',same_week_reversal_units:'Unique same-week reversals removed',training_p99_capped_units:'Training-defined extreme cap'}[r.variant]}</th><td>{fmt(r.mean_loss)}</td><td>{fmt(r.mean_shortfall)}</td><td>{fmt(r.mean_leftover)}</td></tr>)}</tbody></table></div><p>Each sensitivity changes the recorded-activity target. Lower mismatch across different targets does not by itself show a better allocation method. Full results for all policies and settings are in the reproduction package.</p></details>
     <p class="scope-note">The data do not reveal on-hand inventory, unfulfilled requests, acquisition costs, lead times or product dimensions. Records are assumed available by week-end; this is a retrospective experiment, not an as-issued operational backtest. The exact model and baselines are verified independently; the website does not control a real retailer’s operations.</p>
   </div></section>
-  <section class="section shell study-prose" id="sources"><p class="eyebrow">Follow the evidence</p><h2>Open records. Reproducible decisions.</h2><p>Chen, D. (2012). <em>Online Retail II</em> [Dataset]. UCI Machine Learning Repository. DOI 10.24432/C5CG6D. Retrieved 14 September 2026. The package identifies the source snapshot, transformations, fixed protocol and evaluated results. Only product/week aggregates are included; the original workbook is available from UCI.</p><div class="download-grid"><a href="/files/retail/retail_allocation.ipynb" download><strong>Explore the notebook ↗</strong><span>Python · Jupyter / Google Colab compatible</span></a><a href="/files/retail/retail-allocation-reproducibility.zip" download><strong>Reproduce the study ↗</strong><span>Code, aggregate data, tests and results · ZIP</span></a><a href="/files/retail/weekly_results.csv" download><strong>Inspect every result ↗</strong><span>23 test weeks · all budgets, priorities and policies · CSV</span></a></div><p><a href="https://archive.ics.uci.edu/dataset/502/online+retail+ii">Original dataset</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 licence</a> · <a href="/files/retail/weekly_quantities.csv" download>Prepared weekly activity</a></p><p class="muted">To use Google Colab, upload the notebook and follow its setup cell with the reproduction ZIP. The interactive page runs locally in your browser; no account is needed.</p><a class="text-link" href="/projects/">Back to all projects →</a></section>
+  <StudyEvidence title="Open records. Reproducible decisions." notebook="retail">
+<Fragment slot="description"><p>Chen, D. (2012). <em>Online Retail II</em> [Dataset]. UCI Machine Learning Repository. DOI 10.24432/C5CG6D. Retrieved 14 September 2026. The package identifies the source snapshot, transformations, fixed protocol and evaluated results. Only product/week aggregates are included; the original workbook is available from UCI.</p></Fragment>
+<p><a href="https://archive.ics.uci.edu/dataset/502/online+retail+ii">Original dataset</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 licence</a></p>
+</StudyEvidence>
 </Site>

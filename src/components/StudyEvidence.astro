@@ -1,0 +1,14 @@
+---
+import colabNotebooks from '../data/colab-notebooks.json';
+interface Props { title: string; notebook: keyof typeof colabNotebooks }
+const { title, notebook } = Astro.props;
+---
+<section class="section shell study-prose" id="sources">
+  <p class="eyebrow">Follow the evidence</p>
+  <h2>{title}</h2>
+  <slot name="description" />
+  <p class="notebook-access"><a class="button" href={colabNotebooks[notebook].colabUrl}>Open in Google Colab <span aria-hidden="true">↗</span></a></p>
+  <p class="muted">The notebook loads the study data, code and complete results. Run its setup cell to begin; no separate downloads are needed.</p>
+  <slot />
+  <a class="text-link" href="/projects/">Back to all projects →</a>
+</section>

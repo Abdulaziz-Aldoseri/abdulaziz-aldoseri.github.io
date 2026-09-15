@@ -1,0 +1,945 @@
+{
+  "schema_version": "1.0.0",
+  "year": 2025,
+  "carrier_code": "OO",
+  "carrier_id": "20304",
+  "carrier_name": "SkyWest Airlines Inc.",
+  "hub": "DEN",
+  "hub_id": "11292",
+  "types": [
+    {
+      "id": "629",
+      "label": "CRJ-200 / RJ-440 (BTS 629)"
+    },
+    {
+      "id": "631",
+      "label": "CRJ-700 (BTS 631)"
+    },
+    {
+      "id": "673",
+      "label": "ERJ-175 (BTS 673)"
+    }
+  ],
+  "months": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "days_by_month": {
+    "1": 31,
+    "2": 28,
+    "3": 31,
+    "4": 30,
+    "5": 31,
+    "6": 30,
+    "7": 31,
+    "8": 31,
+    "9": 30,
+    "10": 31,
+    "11": 30,
+    "12": 31
+  },
+  "routes": [
+    {
+      "id": "11109",
+      "destination": "COS",
+      "destination_id": "11109",
+      "annual_scoped_passengers": 309510,
+      "coefficients": {
+        "629": {
+          "seats": 50,
+          "block_minutes": 116,
+          "share_numerator": 2750,
+          "share_denominator": 3569
+        },
+        "631": {
+          "seats": 69,
+          "block_minutes": 112,
+          "share_numerator": 421,
+          "share_denominator": 7138
+        },
+        "673": {
+          "seats": 72,
+          "block_minutes": 117,
+          "share_numerator": 1217,
+          "share_denominator": 7138
+        }
+      },
+      "observations": [
+        {
+          "month": 1,
+          "out_passengers": 12573,
+          "in_passengers": 11309,
+          "out_departures": 277,
+          "in_departures": 285
+        },
+        {
+          "month": 2,
+          "out_passengers": 10884,
+          "in_passengers": 10543,
+          "out_departures": 251,
+          "in_departures": 261
+        },
+        {
+          "month": 3,
+          "out_passengers": 12684,
+          "in_passengers": 12976,
+          "out_departures": 296,
+          "in_departures": 296
+        },
+        {
+          "month": 4,
+          "out_passengers": 12147,
+          "in_passengers": 12196,
+          "out_departures": 274,
+          "in_departures": 287
+        },
+        {
+          "month": 5,
+          "out_passengers": 13725,
+          "in_passengers": 13942,
+          "out_departures": 299,
+          "in_departures": 318
+        },
+        {
+          "month": 6,
+          "out_passengers": 14042,
+          "in_passengers": 14268,
+          "out_departures": 301,
+          "in_departures": 323
+        },
+        {
+          "month": 7,
+          "out_passengers": 13126,
+          "in_passengers": 13482,
+          "out_departures": 311,
+          "in_departures": 348
+        },
+        {
+          "month": 8,
+          "out_passengers": 13794,
+          "in_passengers": 12916,
+          "out_departures": 316,
+          "in_departures": 335
+        },
+        {
+          "month": 9,
+          "out_passengers": 13999,
+          "in_passengers": 13724,
+          "out_departures": 302,
+          "in_departures": 305
+        },
+        {
+          "month": 10,
+          "out_passengers": 13145,
+          "in_passengers": 12459,
+          "out_departures": 298,
+          "in_departures": 304
+        },
+        {
+          "month": 11,
+          "out_passengers": 10548,
+          "in_passengers": 10975,
+          "out_departures": 249,
+          "in_departures": 245
+        },
+        {
+          "month": 12,
+          "out_passengers": 14499,
+          "in_passengers": 15554,
+          "out_departures": 325,
+          "in_departures": 332
+        }
+      ]
+    },
+    {
+      "id": "10372",
+      "destination": "ASE",
+      "destination_id": "10372",
+      "annual_scoped_passengers": 277897,
+      "coefficients": {
+        "631": {
+          "seats": 69,
+          "block_minutes": 137,
+          "share_numerator": 507,
+          "share_denominator": 5284
+        },
+        "673": {
+          "seats": 70,
+          "block_minutes": 129,
+          "share_numerator": 4777,
+          "share_denominator": 5284
+        }
+      },
+      "observations": [
+        {
+          "month": 1,
+          "out_passengers": 12703,
+          "in_passengers": 14706,
+          "out_departures": 286,
+          "in_departures": 277
+        },
+        {
+          "month": 2,
+          "out_passengers": 12891,
+          "in_passengers": 13280,
+          "out_departures": 240,
+          "in_departures": 240
+        },
+        {
+          "month": 3,
+          "out_passengers": 15076,
+          "in_passengers": 16292,
+          "out_departures": 281,
+          "in_departures": 278
+        },
+        {
+          "month": 4,
+          "out_passengers": 9900,
+          "in_passengers": 12042,
+          "out_departures": 241,
+          "in_departures": 239
+        },
+        {
+          "month": 5,
+          "out_passengers": 1106,
+          "in_passengers": 1033,
+          "out_departures": 32,
+          "in_departures": 35
+        },
+        {
+          "month": 6,
+          "out_passengers": 12261,
+          "in_passengers": 11350,
+          "out_departures": 232,
+          "in_departures": 225
+        },
+        {
+          "month": 7,
+          "out_passengers": 13495,
+          "in_passengers": 14214,
+          "out_departures": 235,
+          "in_departures": 228
+        },
+        {
+          "month": 8,
+          "out_passengers": 12890,
+          "in_passengers": 14635,
+          "out_departures": 235,
+          "in_departures": 234
+        },
+        {
+          "month": 9,
+          "out_passengers": 11369,
+          "in_passengers": 12483,
+          "out_departures": 227,
+          "in_departures": 226
+        },
+        {
+          "month": 10,
+          "out_passengers": 10751,
+          "in_passengers": 11682,
+          "out_departures": 216,
+          "in_departures": 212
+        },
+        {
+          "month": 11,
+          "out_passengers": 9268,
+          "in_passengers": 8878,
+          "out_departures": 172,
+          "in_departures": 172
+        },
+        {
+          "month": 12,
+          "out_passengers": 14470,
+          "in_passengers": 11122,
+          "out_departures": 265,
+          "in_departures": 256
+        }
+      ]
+    },
+    {
+      "id": "14457",
+      "destination": "RAP",
+      "destination_id": "14457",
+      "annual_scoped_passengers": 222365,
+      "coefficients": {
+        "629": {
+          "seats": 50,
+          "block_minutes": 170,
+          "share_numerator": 523,
+          "share_denominator": 759
+        },
+        "631": {
+          "seats": 70,
+          "block_minutes": 159,
+          "share_numerator": 35,
+          "share_denominator": 506
+        },
+        "673": {
+          "seats": 72,
+          "block_minutes": 172,
+          "share_numerator": 367,
+          "share_denominator": 1518
+        }
+      },
+      "observations": [
+        {
+          "month": 1,
+          "out_passengers": 8606,
+          "in_passengers": 8409,
+          "out_departures": 170,
+          "in_departures": 172
+        },
+        {
+          "month": 2,
+          "out_passengers": 7284,
+          "in_passengers": 7390,
+          "out_departures": 157,
+          "in_departures": 157
+        },
+        {
+          "month": 3,
+          "out_passengers": 9459,
+          "in_passengers": 9280,
+          "out_departures": 209,
+          "in_departures": 210
+        },
+        {
+          "month": 4,
+          "out_passengers": 10588,
+          "in_passengers": 9874,
+          "out_departures": 211,
+          "in_departures": 211
+        },
+        {
+          "month": 5,
+          "out_passengers": 9811,
+          "in_passengers": 8510,
+          "out_departures": 189,
+          "in_departures": 187
+        },
+        {
+          "month": 6,
+          "out_passengers": 11061,
+          "in_passengers": 9986,
+          "out_departures": 214,
+          "in_departures": 207
+        },
+        {
+          "month": 7,
+          "out_passengers": 10828,
+          "in_passengers": 10325,
+          "out_departures": 208,
+          "in_departures": 206
+        },
+        {
+          "month": 8,
+          "out_passengers": 11080,
+          "in_passengers": 10908,
+          "out_departures": 213,
+          "in_departures": 212
+        },
+        {
+          "month": 9,
+          "out_passengers": 10607,
+          "in_passengers": 10481,
+          "out_departures": 195,
+          "in_departures": 197
+        },
+        {
+          "month": 10,
+          "out_passengers": 7281,
+          "in_passengers": 7611,
+          "out_departures": 176,
+          "in_departures": 176
+        },
+        {
+          "month": 11,
+          "out_passengers": 7149,
+          "in_passengers": 7159,
+          "out_departures": 156,
+          "in_departures": 158
+        },
+        {
+          "month": 12,
+          "out_passengers": 9393,
+          "in_passengers": 9285,
+          "out_departures": 184,
+          "in_departures": 179
+        }
+      ]
+    },
+    {
+      "id": "11122",
+      "destination": "CPR",
+      "destination_id": "11122",
+      "annual_scoped_passengers": 203001,
+      "coefficients": {
+        "629": {
+          "seats": 50,
+          "block_minutes": 155,
+          "share_numerator": 4358,
+          "share_denominator": 4779
+        },
+        "631": {
+          "seats": 70,
+          "block_minutes": 144,
+          "share_numerator": 280,
+          "share_denominator": 4779
+        },
+        "673": {
+          "seats": 71,
+          "block_minutes": 156,
+          "share_numerator": 47,
+          "share_denominator": 1593
+        }
+      },
+      "observations": [
+        {
+          "month": 1,
+          "out_passengers": 7151,
+          "in_passengers": 7438,
+          "out_departures": 184,
+          "in_departures": 184
+        },
+        {
+          "month": 2,
+          "out_passengers": 6760,
+          "in_passengers": 6757,
+          "out_departures": 168,
+          "in_departures": 167
+        },
+        {
+          "month": 3,
+          "out_passengers": 7913,
+          "in_passengers": 7984,
+          "out_departures": 185,
+          "in_departures": 185
+        },
+        {
+          "month": 4,
+          "out_passengers": 7471,
+          "in_passengers": 7346,
+          "out_departures": 178,
+          "in_departures": 174
+        },
+        {
+          "month": 5,
+          "out_passengers": 8882,
+          "in_passengers": 8721,
+          "out_departures": 195,
+          "in_departures": 198
+        },
+        {
+          "month": 6,
+          "out_passengers": 9451,
+          "in_passengers": 9674,
+          "out_departures": 209,
+          "in_departures": 213
+        },
+        {
+          "month": 7,
+          "out_passengers": 9238,
+          "in_passengers": 9594,
+          "out_departures": 206,
+          "in_departures": 212
+        },
+        {
+          "month": 8,
+          "out_passengers": 9043,
+          "in_passengers": 9400,
+          "out_departures": 212,
+          "in_departures": 215
+        },
+        {
+          "month": 9,
+          "out_passengers": 8769,
+          "in_passengers": 8828,
+          "out_departures": 211,
+          "in_departures": 209
+        },
+        {
+          "month": 10,
+          "out_passengers": 9039,
+          "in_passengers": 9412,
+          "out_departures": 216,
+          "in_departures": 216
+        },
+        {
+          "month": 11,
+          "out_passengers": 8321,
+          "in_passengers": 8180,
+          "out_departures": 204,
+          "in_departures": 204
+        },
+        {
+          "month": 12,
+          "out_passengers": 8728,
+          "in_passengers": 8901,
+          "out_departures": 217,
+          "in_departures": 217
+        }
+      ]
+    },
+    {
+      "id": "13851",
+      "destination": "OKC",
+      "destination_id": "13851",
+      "annual_scoped_passengers": 198547,
+      "coefficients": {
+        "629": {
+          "seats": 50,
+          "block_minutes": 246,
+          "share_numerator": 17,
+          "share_denominator": 1617
+        },
+        "631": {
+          "seats": 70,
+          "block_minutes": 218,
+          "share_numerator": 31,
+          "share_denominator": 231
+        },
+        "673": {
+          "seats": 73,
+          "block_minutes": 221,
+          "share_numerator": 461,
+          "share_denominator": 539
+        }
+      },
+      "observations": [
+        {
+          "month": 1,
+          "out_passengers": 8746,
+          "in_passengers": 8301,
+          "out_departures": 138,
+          "in_departures": 138
+        },
+        {
+          "month": 2,
+          "out_passengers": 7661,
+          "in_passengers": 7604,
+          "out_departures": 130,
+          "in_departures": 133
+        },
+        {
+          "month": 3,
+          "out_passengers": 8842,
+          "in_passengers": 9033,
+          "out_departures": 154,
+          "in_departures": 156
+        },
+        {
+          "month": 4,
+          "out_passengers": 8719,
+          "in_passengers": 8732,
+          "out_departures": 152,
+          "in_departures": 154
+        },
+        {
+          "month": 5,
+          "out_passengers": 9767,
+          "in_passengers": 10570,
+          "out_departures": 158,
+          "in_departures": 160
+        },
+        {
+          "month": 6,
+          "out_passengers": 9924,
+          "in_passengers": 10082,
+          "out_departures": 150,
+          "in_departures": 152
+        },
+        {
+          "month": 7,
+          "out_passengers": 9953,
+          "in_passengers": 9836,
+          "out_departures": 155,
+          "in_departures": 157
+        },
+        {
+          "month": 8,
+          "out_passengers": 9585,
+          "in_passengers": 9243,
+          "out_departures": 149,
+          "in_departures": 148
+        },
+        {
+          "month": 9,
+          "out_passengers": 8773,
+          "in_passengers": 8542,
+          "out_departures": 132,
+          "in_departures": 134
+        },
+        {
+          "month": 10,
+          "out_passengers": 6866,
+          "in_passengers": 6654,
+          "out_departures": 110,
+          "in_departures": 109
+        },
+        {
+          "month": 11,
+          "out_passengers": 5063,
+          "in_passengers": 4885,
+          "out_departures": 88,
+          "in_departures": 90
+        },
+        {
+          "month": 12,
+          "out_passengers": 5504,
+          "in_passengers": 5662,
+          "out_departures": 92,
+          "in_departures": 95
+        }
+      ]
+    },
+    {
+      "id": "12280",
+      "destination": "IDA",
+      "destination_id": "12280",
+      "annual_scoped_passengers": 182707,
+      "coefficients": {
+        "629": {
+          "seats": 50,
+          "block_minutes": 210,
+          "share_numerator": 323,
+          "share_denominator": 828
+        },
+        "631": {
+          "seats": 69,
+          "block_minutes": 208,
+          "share_numerator": 283,
+          "share_denominator": 828
+        },
+        "673": {
+          "seats": 73,
+          "block_minutes": 213,
+          "share_numerator": 37,
+          "share_denominator": 138
+        }
+      },
+      "observations": [
+        {
+          "month": 1,
+          "out_passengers": 6402,
+          "in_passengers": 6472,
+          "out_departures": 122,
+          "in_departures": 121
+        },
+        {
+          "month": 2,
+          "out_passengers": 5919,
+          "in_passengers": 5869,
+          "out_departures": 109,
+          "in_departures": 110
+        },
+        {
+          "month": 3,
+          "out_passengers": 6477,
+          "in_passengers": 6723,
+          "out_departures": 124,
+          "in_departures": 124
+        },
+        {
+          "month": 4,
+          "out_passengers": 6780,
+          "in_passengers": 6674,
+          "out_departures": 119,
+          "in_departures": 119
+        },
+        {
+          "month": 5,
+          "out_passengers": 8162,
+          "in_passengers": 7582,
+          "out_departures": 153,
+          "in_departures": 148
+        },
+        {
+          "month": 6,
+          "out_passengers": 8475,
+          "in_passengers": 8183,
+          "out_departures": 156,
+          "in_departures": 153
+        },
+        {
+          "month": 7,
+          "out_passengers": 9571,
+          "in_passengers": 9627,
+          "out_departures": 183,
+          "in_departures": 178
+        },
+        {
+          "month": 8,
+          "out_passengers": 9679,
+          "in_passengers": 9625,
+          "out_departures": 178,
+          "in_departures": 176
+        },
+        {
+          "month": 9,
+          "out_passengers": 8892,
+          "in_passengers": 9161,
+          "out_departures": 164,
+          "in_departures": 164
+        },
+        {
+          "month": 10,
+          "out_passengers": 7799,
+          "in_passengers": 8349,
+          "out_departures": 146,
+          "in_departures": 143
+        },
+        {
+          "month": 11,
+          "out_passengers": 7199,
+          "in_passengers": 7275,
+          "out_departures": 117,
+          "in_departures": 118
+        },
+        {
+          "month": 12,
+          "out_passengers": 5885,
+          "in_passengers": 5927,
+          "out_departures": 95,
+          "in_departures": 92
+        }
+      ]
+    },
+    {
+      "id": "14869",
+      "destination": "SLC",
+      "destination_id": "14869",
+      "annual_scoped_passengers": 164061,
+      "coefficients": {
+        "629": {
+          "seats": 50,
+          "block_minutes": 221,
+          "share_numerator": 232,
+          "share_denominator": 2841
+        },
+        "631": {
+          "seats": 69,
+          "block_minutes": 195,
+          "share_numerator": 248,
+          "share_denominator": 947
+        },
+        "673": {
+          "seats": 72,
+          "block_minutes": 197,
+          "share_numerator": 1865,
+          "share_denominator": 2841
+        }
+      },
+      "observations": [
+        {
+          "month": 1,
+          "out_passengers": 5556,
+          "in_passengers": 5393,
+          "out_departures": 106,
+          "in_departures": 106
+        },
+        {
+          "month": 2,
+          "out_passengers": 6181,
+          "in_passengers": 5792,
+          "out_departures": 115,
+          "in_departures": 114
+        },
+        {
+          "month": 3,
+          "out_passengers": 7161,
+          "in_passengers": 6923,
+          "out_departures": 133,
+          "in_departures": 132
+        },
+        {
+          "month": 4,
+          "out_passengers": 9001,
+          "in_passengers": 8314,
+          "out_departures": 149,
+          "in_departures": 147
+        },
+        {
+          "month": 5,
+          "out_passengers": 7600,
+          "in_passengers": 7009,
+          "out_departures": 121,
+          "in_departures": 121
+        },
+        {
+          "month": 6,
+          "out_passengers": 5799,
+          "in_passengers": 5721,
+          "out_departures": 100,
+          "in_departures": 97
+        },
+        {
+          "month": 7,
+          "out_passengers": 5924,
+          "in_passengers": 6095,
+          "out_departures": 99,
+          "in_departures": 103
+        },
+        {
+          "month": 8,
+          "out_passengers": 6862,
+          "in_passengers": 6673,
+          "out_departures": 114,
+          "in_departures": 120
+        },
+        {
+          "month": 9,
+          "out_passengers": 8933,
+          "in_passengers": 8916,
+          "out_departures": 143,
+          "in_departures": 145
+        },
+        {
+          "month": 10,
+          "out_passengers": 7704,
+          "in_passengers": 7734,
+          "out_departures": 129,
+          "in_departures": 127
+        },
+        {
+          "month": 11,
+          "out_passengers": 6559,
+          "in_passengers": 6607,
+          "out_departures": 111,
+          "in_departures": 108
+        },
+        {
+          "month": 12,
+          "out_passengers": 6054,
+          "in_passengers": 5550,
+          "out_departures": 103,
+          "in_departures": 98
+        }
+      ]
+    },
+    {
+      "id": "14783",
+      "destination": "SGF",
+      "destination_id": "14783",
+      "annual_scoped_passengers": 162708,
+      "coefficients": {
+        "629": {
+          "seats": 50,
+          "block_minutes": 253,
+          "share_numerator": 269,
+          "share_denominator": 2607
+        },
+        "631": {
+          "seats": 70,
+          "block_minutes": 247,
+          "share_numerator": 611,
+          "share_denominator": 2607
+        },
+        "673": {
+          "seats": 71,
+          "block_minutes": 249,
+          "share_numerator": 157,
+          "share_denominator": 237
+        }
+      },
+      "observations": [
+        {
+          "month": 1,
+          "out_passengers": 5112,
+          "in_passengers": 5197,
+          "out_departures": 95,
+          "in_departures": 94
+        },
+        {
+          "month": 2,
+          "out_passengers": 5252,
+          "in_passengers": 5337,
+          "out_departures": 97,
+          "in_departures": 96
+        },
+        {
+          "month": 3,
+          "out_passengers": 6546,
+          "in_passengers": 6517,
+          "out_departures": 120,
+          "in_departures": 122
+        },
+        {
+          "month": 4,
+          "out_passengers": 5552,
+          "in_passengers": 5443,
+          "out_departures": 88,
+          "in_departures": 89
+        },
+        {
+          "month": 5,
+          "out_passengers": 7453,
+          "in_passengers": 7766,
+          "out_departures": 120,
+          "in_departures": 117
+        },
+        {
+          "month": 6,
+          "out_passengers": 7850,
+          "in_passengers": 7852,
+          "out_departures": 119,
+          "in_departures": 120
+        },
+        {
+          "month": 7,
+          "out_passengers": 8222,
+          "in_passengers": 8251,
+          "out_departures": 124,
+          "in_departures": 120
+        },
+        {
+          "month": 8,
+          "out_passengers": 8193,
+          "in_passengers": 8326,
+          "out_departures": 125,
+          "in_departures": 125
+        },
+        {
+          "month": 9,
+          "out_passengers": 7785,
+          "in_passengers": 8027,
+          "out_departures": 119,
+          "in_departures": 120
+        },
+        {
+          "month": 10,
+          "out_passengers": 7645,
+          "in_passengers": 7659,
+          "out_departures": 117,
+          "in_departures": 118
+        },
+        {
+          "month": 11,
+          "out_passengers": 5426,
+          "in_passengers": 5608,
+          "out_departures": 89,
+          "in_departures": 89
+        },
+        {
+          "month": 12,
+          "out_passengers": 5700,
+          "in_passengers": 5989,
+          "out_departures": 92,
+          "in_departures": 92
+        }
+      ]
+    }
+  ],
+  "protocol_sha256": "6e7b649aadebe089aec5038fccda4a8070030b86f6acb0644949b7c12db0f936",
+  "observed_segments_sha256": "0ebbe4fd5e7be49108a642e275e25338bf121642aaaef35a5677f29c61d104a1"
+}

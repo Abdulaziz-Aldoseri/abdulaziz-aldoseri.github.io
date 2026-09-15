@@ -1,4 +1,7 @@
 ---
+import StudyHeader from '../../../components/StudyHeader.astro';
+import StudyEvidence from '../../../components/StudyEvidence.astro';
+import { studies } from '../../../data/studies';
 import Site from '../../../layouts/Site.astro';
 import EnergyExplorer from '../../../components/EnergyExplorer';
 import EnergyStudyBrief from '../../../components/EnergyStudyBrief.astro';
@@ -6,14 +9,7 @@ import index from '../../../data/energy-index.json';
 import sensitivity from '../../../data/energy-sensitivity.json';
 ---
 <Site title="Can electricity storage reduce daily peaks?" description="An open-data study of electricity storage scheduling: the decisions, forecasts and physical constraints behind peak reduction using Great Britain’s demand data.">
-<div class="shell study-heading">
-  <a class="breadcrumb" href="/projects/">← Decision Lab</a>
-  <p class="eyebrow">01 / Energy &amp; infrastructure · Independent study · 2026</p>
-  <h1>Can electricity storage<br />reduce daily peaks?</h1>
-  <p class="page-intro">Storage draws electricity when charging and supplies it when discharging. The decision is when to do each so that the day’s highest requirement is lower—even though actual demand is unknown when the schedule is set.</p>
-  <p class="study-context">This study adds a hypothetical store to Great Britain’s electricity system. It uses NESO National Demand: a metered-generation requirement excluding station load, pumping and exports. The model schedules storage against a simple forecast, then tests that schedule against actual observations.</p>
-  <div class="study-links"><a href="#model-brief-heading">Understand the model ↓</a><a href="#explorer">Try the scenarios</a><a href="#findings">Results &amp; implications</a><a href="#sources">Data &amp; notebook</a></div>
-</div>
+<StudyHeader study={studies.energy} />
 <EnergyStudyBrief />
 <section class="tint experiment-section" id="explorer"><div class="shell">
   <div class="explorer-intro">
@@ -22,7 +18,7 @@ import sensitivity from '../../../data/energy-sensitivity.json';
     <p><strong>Read the result as a change in the daily peak.</strong> Peak reduction is the highest observed requirement minus the highest requirement after adding the storage schedule. A forecast error can place charging at the wrong time and create a higher peak, giving a negative result.</p>
   </div>
   <EnergyExplorer index={index} client:load />
-  <noscript><p>The default evaluated scenario is shown above. Enable JavaScript to change the date or capacity, or download all results below.</p></noscript>
+  <noscript><p>The default evaluated scenario is shown above. Enable JavaScript to change the date or capacity, or inspect complete results in the Colab notebook below.</p></noscript>
   <p class="source-credit">Supported by <a href="https://www.neso.energy/data-portal/historic-demand-data">National Energy SO Open Data</a>. Historic Demand Data 2024/2025 · <a href="https://www.neso.energy/data-portal/neso-open-licence">NESO Open Data Licence</a>. Processing and model: Abdulaziz Aldoseri.</p>
 </div></section>
 <section class="section shell study-prose" id="findings">
@@ -52,5 +48,8 @@ import sensitivity from '../../../data/energy-sensitivity.json';
   </div>
   <p class="scope-note">The annual source files are revised snapshots. This is a chronological retrospective demonstration, not an as-issued operational backtest. Original schedules and results remain frozen; the later schedule-selection sensitivity is identified separately above.</p>
 </div></section>
-<section class="section shell study-prose" id="sources"><p class="eyebrow">Follow the evidence</p><h2>Open data. Reproducible work.</h2><p>National Energy System Operator, Historic Demand Data 2024/2025. Retrieved 14 September 2026. Original snapshots, SHA-256 hashes, transformations and assumptions are included in the reproduction package. The study is independent work by Abdulaziz Aldoseri; source attribution does not imply NESO endorsement.</p><div class="download-grid"><a href="/files/energy/reference_study.ipynb" download><strong>Explore the notebook ↗</strong><span>Jupyter / Google Colab compatible · Python</span></a><a href="/files/energy/energy-flexibility-reproducibility.zip" download><strong>Reproduce the study ↗</strong><span>Code, source data, tests and results · ZIP</span></a><a href="/files/energy/daily_results.csv" download><strong>Inspect every result ↗</strong><span>245 days × 12 capacities × 4 strategies · CSV</span></a></div><p><a href="https://www.neso.energy/data-portal/historic-demand-data">Original dataset</a> · <a href="https://www.neso.energy/data-portal/neso-open-licence">Data licence</a></p><p class="muted">To run in Google Colab, upload the notebook and follow its setup cell. No account or service is needed to explore the evaluated results on this page.</p><a class="text-link" href="/projects/">Back to all projects →</a></section>
+<StudyEvidence title="Open data. Reproducible work." notebook="energy">
+<Fragment slot="description"><p>National Energy System Operator, Historic Demand Data 2024/2025. Retrieved 14 September 2026. Original snapshots, SHA-256 hashes, transformations and assumptions are included in the reproduction package. The study is independent work by Abdulaziz Aldoseri; source attribution does not imply NESO endorsement.</p></Fragment>
+<p><a href="https://www.neso.energy/data-portal/historic-demand-data">Original dataset</a> · <a href="https://www.neso.energy/data-portal/neso-open-licence">Data licence</a></p>
+</StudyEvidence>
 </Site>

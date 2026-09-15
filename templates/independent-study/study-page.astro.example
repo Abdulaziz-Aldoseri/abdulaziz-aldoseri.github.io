@@ -1,0 +1,38 @@
+---
+// Starter only: fill all fields from the admitted source and reviewed evidence.
+// Save the implemented page at src/pages/projects/<slug>/index.astro.
+import Site from '../../../layouts/Site.astro';
+import StudyHeader from '../../../components/StudyHeader.astro';
+import DecisionBrief from '../../../components/DecisionBrief.astro';
+import StudyEvidence from '../../../components/StudyEvidence.astro';
+import { studies } from '../../../data/studies';
+// Import the domain explorer and its native, frozen payload here.
+const study = studies.REPLACE_ID;
+// Add the study to the Colab delivery generator and its generated metadata.
+---
+<Site title={study.title} description="REPLACE_WITH_PRECISE_SCOPE">
+  <StudyHeader study={study} />
+  <DecisionBrief id="model" title="The decision" items={[
+    { label: 'The decision', text: 'REPLACE: controllable variables, domain and units' },
+    { label: 'The objective', text: 'REPLACE: metric, direction and tie rules' },
+    { label: 'The information', text: 'REPLACE: observed/derived inputs and availability' },
+    { label: 'The constraints', text: 'REPLACE: resources, balance and omitted constraints' }
+  ]}>
+    <p class="model-control-explanation">REPLACE: explain hypothetical controls.</p>
+    <details class="data-details model-formulation"><summary>Formulation and comparison policies</summary><p>REPLACE: domain equations and fair baseline.</p></details>
+    <p class="model-scope">REPLACE: principal interpretation limit, visible before controls.</p>
+  </DecisionBrief>
+  <section class="section tint" id="explorer"><div class="shell">
+    <div class="explorer-intro"><h2>REPLACE: useful experiment</h2><p>REPLACE: controls versus model decisions; runtime and reference.</p></div>
+    <!-- Domain explorer: use StudyWorkbench + StudyControlPanel, direct controls and adjacent results. Avoid dropdowns; never use a long dropdown. Keep the live outcome visible on mobile, preserve keyboard/scroll position, and include a valid server-rendered reference. -->
+    <noscript><p>Enable JavaScript to change scenarios. Inspect the reference and complete results in the notebook.</p></noscript>
+    <p class="source-credit">REPLACE: required original-source attribution.</p>
+  </div></section>
+  <section class="section shell study-prose" id="findings"><p class="eyebrow">What the evidence supports</p><h2>REPLACE: supported finding</h2><p>REPLACE: full-case evidence, baseline, adverse outcomes and limits.</p></section>
+  <section class="section tint" id="method"><div class="shell study-prose"><h2>Method and limits</h2><p>REPLACE: preparation, evaluation design, feasibility and missing operational information.</p></div></section>
+  <StudyEvidence title="Open data. Reproducible work." notebook="REPLACE_ID">
+    <Fragment slot="description"><p>REPLACE: source, coverage, retrieval and package contents.</p></Fragment>
+    <p>REPLACE: original source and licence links; keep data access inside the notebook.</p>
+    <p class="muted">REPLACE: study-specific source attribution; keep setup and execution status in the notebook.</p>
+  </StudyEvidence>
+</Site>
