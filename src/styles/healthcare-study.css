@@ -1,0 +1,18 @@
+.healthcare-study .metric-grid strong small { font-size: .75rem; font-weight: 500; }
+.healthcare-day-detail, .healthcare-theatre, .healthcare-patient-detail { padding: 22px; margin-block: 24px; border: 1px solid var(--line); background: var(--paper); }
+.healthcare-day-detail h4, .healthcare-theatre h4 { margin-top: 0; }
+.healthcare-patient-chips { display: flex; flex-wrap: wrap; gap: 7px; }
+.healthcare-patient-chips button { padding: 10px 12px; min-height: 44px; background: transparent; border: 1px solid var(--line); border-radius: 4px; color: var(--teal); cursor: pointer; font: inherit; font-size: .8rem; }
+.healthcare-patient-chips button[aria-pressed=true] { background: var(--teal); color: var(--paper); }
+.healthcare-theatre-row { display: grid; grid-template-columns: 42px minmax(0,1fr) 105px; align-items: center; gap: 14px; padding-block: 12px; font-size: .8rem; }
+.healthcare-theatre-row > small { font-variant-numeric: tabular-nums; text-align: right; line-height: 1.5; }
+.healthcare-theatre-bars { display: flex; position: relative; height: 23px; background: #ebe9dc; }
+.healthcare-theatre-bars > div { background: #0d605a; height: 100%; }
+.healthcare-theatre-bars > .extra { background: #b25834; }
+.healthcare-theatre-bars > i { position: absolute; top: -5px; bottom: -5px; border-left: 2px solid var(--ink); transform: translateX(-1px); }
+.healthcare-stay-strip { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(7,minmax(0,1fr)); gap: 4px; }
+.healthcare-stay-strip li { display: flex; flex-direction: column; gap: 8px; padding: 12px 3px; text-align: center; background: #ecebdf; font-size: .66rem; }
+.healthcare-stay-strip li.occupied { background: #dce9dc; border-bottom: 3px solid var(--teal); }
+.healthcare-stay-strip strong { font-size: .65rem; overflow-wrap: anywhere; }
+.healthcare-table-status { display: block; max-width: 180px; font-size: .65rem; white-space: normal; margin-top: 5px; }
+@media(max-width:760px) { .healthcare-day-detail,.healthcare-theatre,.healthcare-patient-detail { padding: 14px; } .healthcare-theatre-row { grid-template-columns: 34px minmax(0,1fr) 92px; gap: 8px; } .healthcare-stay-strip { gap: 2px; } }

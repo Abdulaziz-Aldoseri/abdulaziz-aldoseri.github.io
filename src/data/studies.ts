@@ -183,5 +183,40 @@ export const studies = {
         "label": "Data & notebook"
       }
     ]
+  },
+  "healthcare": {
+    "id": "healthcare",
+    "templateVersion": "2.1.1",
+    "order": 6,
+    "sector": "Healthcare",
+    "year": 2026,
+    "title": "When should surgical patients be admitted?",
+    "introduction": "Booking surgery also commits a recovery bed for several days. When should each patient arrive, and which ward should hold that complete stay, when bed space and theatre time are both limited?",
+    "context": "Explore admissions, surgery and recovery together using open generated benchmarks based on one Belgian hospital. Compare earlier admissions with less extra theatre time, while keeping every patient and the source’s fixed admission windows.",
+    "route": "/projects/healthcare-scheduling/",
+    "evidence": {
+      "stage": "evaluated",
+      "evidenceVersion": "2026-09-15-healthcare-scheduling-v1.0.0",
+      "runtime": "precomputed-grid",
+      "independentlyReviewed": true
+    },
+    "sections": [
+      {
+        "id": "healthcare-model",
+        "label": "Understand the decision ↓"
+      },
+      {
+        "id": "healthcare-explorer",
+        "label": "Explore the schedule"
+      },
+      {
+        "id": "healthcare-cases",
+        "label": "Compare every case"
+      },
+      {
+        "id": "sources",
+        "label": "Data & notebook"
+      }
+    ]
   }
 } satisfies Record<string, StudyDisplay>;

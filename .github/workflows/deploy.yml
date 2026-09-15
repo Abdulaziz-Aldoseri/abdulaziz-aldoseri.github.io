@@ -45,7 +45,10 @@ jobs:
           test -f dist/projects/mobility-rebalancing/index.html
           test -f dist/projects/airline-fleet/index.html
           test -f dist/projects/telecom-staff/index.html
-          for study in energy mobility retail airline telecom; do
+          test -f dist/projects/healthcare-scheduling/index.html
+          test -f dist/data/healthcare/s0m0b0.json
+          test -f dist/files/healthcare/healthcare-scheduling-reproducibility.zip
+          for study in energy mobility retail airline telecom healthcare; do
             test -f "dist/notebooks/$study.ipynb"
           done
           test -f dist/files/Abdulaziz_Aldoseri_CV.pdf

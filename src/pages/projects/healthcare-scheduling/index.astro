@@ -1,0 +1,57 @@
+---
+import Site from '../../../layouts/Site.astro';
+import StudyHeader from '../../../components/StudyHeader.astro';
+import DecisionBrief from '../../../components/DecisionBrief.astro';
+import StudyEvidence from '../../../components/StudyEvidence.astro';
+import HealthcareExplorer from '../../../components/HealthcareExplorer';
+import { studies } from '../../../data/studies';
+import healthcare from '../../../data/healthcare-overview.json';
+import '../../../styles/allocation-studies.css';
+const reference = healthcare.default_case;
+const early = reference.schedules.delay_first;
+const lessExtra = reference.schedules.overtime_first;
+const fmt = (v: number) => new Intl.NumberFormat('en-GB').format(v);
+const proven = healthcare.scenarios.filter(s => s.summaries.delay_first.status === 'lexicographic_optimal' && s.summaries.overtime_first.status === 'lexicographic_optimal').length;
+const missingBaseline = healthcare.scenarios.filter(s => !s.summaries.baseline.metrics).length;
+const tradeoffs = healthcare.scenarios.filter(s => s.summaries.delay_first.metrics && s.summaries.overtime_first.metrics && s.summaries.delay_first.metrics.delay_days !== s.summaries.overtime_first.metrics.delay_days && s.summaries.delay_first.metrics.overtime_minutes !== s.summaries.overtime_first.metrics.overtime_minutes).length;
+---
+<Site title={studies.healthcare.title} description="Explore admission timing, surgery capacity and recovery-bed occupancy using open generated hospital benchmarks. Compare complete schedules through linked interactive calendars.">
+  <StudyHeader study={studies.healthcare} />
+  <DecisionBrief id="healthcare-model" title="One admission. Two connected calendars." items={[
+    {label:'The decision', text:'Assign every new patient an admission day and one eligible ward. Surgery occurs on admission day. The same ward holds the patient for the complete supplied length of stay.'},
+    {label:'The objective', text:'Compare two priorities: minimize total admission delay, then extra theatre minutes; or minimize extra theatre minutes, then delay. The second objective cannot worsen the proven minimum of the first.'},
+    {label:'The information', text:'All patients, admission windows, surgery durations, lengths of stay and eligible wards are known at planning time. Existing patients appear as fixed daily ward occupancy. The source supplies a separate daily theatre budget for each discipline.'},
+    {label:'The constraints', text:'Every patient must receive exactly one placement within their allowed window. Occupancy must fit beds on every recovery day. No patient is dropped, moved between wards or given a shorter stay. Extra theatre time is permitted, measured and made explicit.'},
+  ]}>
+    <p class="model-control-explanation"><strong>Read the two calendars together.</strong> Moving surgery to a different day can ease a theatre bottleneck, but the admission also moves several days of bed occupancy. Patients with fixed admission dates cannot move. A hypothetical closure removes one bed from each ward for the whole week.</p>
+    <details class="data-details model-formulation"><summary>Decision variables, objectives and feasibility</summary>
+      <p>Binary <var>x</var><sub>pwa</sub> is one when patient <var>p</var> enters ward <var>w</var> on day <var>a</var>. Variables exist only for the patient’s allowed dates and ward eligibility.</p>
+      <ul class="model-equations"><li>∑<sub>w,a</sub> x<sub>pwa</sub> = 1 for every patient</li><li>Existing occupancy<sub>wd</sub> + ∑<sub>p,a : a ≤ d &lt; a + stay<sub>p</sub></sub> x<sub>pwa</sub> ≤ beds<sub>w</sub> − closed beds</li><li>Assigned theatre minutes<sub>sd</sub> = ∑<sub>p,w : specialty<sub>p</sub> = s</sub> duration<sub>p</sub> × x<sub>pwd</sub></li><li>Total extra minutes = ∑<sub>s,d</sub> max(0, assigned minutes<sub>sd</sub> − scheduled minutes<sub>sd</sub>)</li><li>Total delay = ∑<sub>p,w,a</sub> (a − earliest day<sub>p</sub>) × x<sub>pwa</sub></li></ul>
+      <p>Each priority is solved in two stages using mixed-integer optimization. Only two proven optimal stages are labelled a lexicographic optimum. The independent checker reconstructs every bed census, surgery total and delay from the complete assignments. Equally optimal schedules may differ at the patient level.</p>
+      <p>The deadline-first comparison tries earlier dates and the major-specialty ward first, backtracking if necessary. It stops at the first complete bed-feasible placement or its fixed search limit. A failed bounded search is an unavailable comparator, not proof that the cohort cannot fit.</p>
+      <p>A separate check asks whether the same cohort could fit with no extra theatre time. Fixed-date surgery that already exceeds a discipline’s daily budget supplies a direct infeasibility certificate. This does not depend on the optimized schedule.</p>
+    </details>
+    <p class="model-scope"><strong>Scope:</strong> generated research instances based on one Belgian hospital, not observed patient records. Admission windows are supplied inputs, not a triage rule. This model has no within-day theatre sequence, surgeon or nurse roster, uncertain emergency arrivals, treatment decisions or clinical outcome model.</p>
+  </DecisionBrief>
+  <section class="section tint" id="healthcare-explorer"><div class="shell">
+    <div class="explorer-intro"><h2>Schedule the admission. Follow the recovery bed.</h2><p>Choose a cohort, ward eligibility and bed availability. Compare scheduling priorities, select a day in the ward calendar, then inspect that day’s theatre load or an individual patient’s complete stay.</p><p><a href="#healthcare-model">Review the decision and assumptions ↑</a></p></div>
+    <HealthcareExplorer index={healthcare} client:load />
+    <noscript><p>The fixed reference schedule and complete case-comparison table remain readable. Enable JavaScript to change scenarios and select calendar cells or patients. The notebook contains all schedules.</p></noscript>
+    <p class="source-credit">Source: Pieter Smet (2023), Data for “Generating balanced workload allocations in hospitals”, Mendeley Data, V1, CC BY 4.0. Independent model and presentation: Abdulaziz Aldoseri.</p>
+  </div></section>
+  <section class="section shell study-prose" id="findings"><p class="eyebrow">What the comparison shows</p><h2>Changing the priority changes what the schedule protects.</h2>
+    {early.metrics && lessExtra.metrics ? <><p>In the predefined reference—cohort 0, no additional ward specialties and no bed closures—the earlier-admission plan produces {fmt(early.metrics.delay_days)} patient-days of delay and requires {fmt(early.metrics.overtime_minutes)} extra theatre minutes. Prioritizing less extra time produces {fmt(lessExtra.metrics.delay_days)} patient-days of delay and requires {fmt(lessExtra.metrics.overtime_minutes)} extra minutes.</p><p>These totals describe the same {reference.instance.patients.length} generated patients. Delay is counted from each patient’s earliest permitted admission, not from referral. Required extra minutes measure a capacity gap; they are not a saving, paid overtime or proof that an additional session can be staffed.</p></> : <p>A complete verified endpoint comparison is unavailable for the fixed reference. Its recorded status remains visible above; no more favourable reference has been substituted.</p>}
+    <p>Across all 40 predetermined cases, {proven} have proven optima for both priorities. The two endpoints differ on both total delay and extra theatre minutes in {tradeoffs} cases. Ten cases are proven infeasible under the hard bed limits. The deadline-first comparator is unavailable in {missingBaseline} cases: eight reach its bounded search limit, and two exhaust its search and prove infeasibility. Every case remains in the comparison.</p>
+    <p>The earlier-admission model matches the deadline-first rule on both objectives in all 30 feasible cases. Prioritizing less extra theatre time reduces that requirement and increases delay in each of those cases. Closing one bed per ward changes the available bed space, but does not change feasibility or either optimal objective in this sample.</p>
+    <div class="scope-note"><p>All five selected cohorts contain fixed-day surgery that exceeds at least one supplied daily theatre budget. Additional ward flexibility cannot erase that fixed requirement. The model helps expose how admission timing and beds interact; it does not demonstrate a deployable hospital schedule or a clinical benefit.</p></div>
+  </section>
+  <section class="section tint" id="method"><div class="shell study-prose"><p class="eyebrow">Evaluation &amp; preparation</p><h2>Complete cohorts. Explicit capacity assumptions.</h2>
+    <div class="method-grid"><article><h3>Preserve the native problem</h3><p>The source archive contains 250 generated cohorts, each with four supplied ward-compatibility configurations. This study fixes the first five numeric cohorts before solving: 117, 102, 142, 113 and 118 patients. All four wards, disciplines and seven days are retained.</p></article><article><h3>Account for every recovery day</h3><p>Existing occupancy is a fixed ward/day count, not individually identified patient histories. Every allowed new-patient stay fits within the supplied seven-day horizon. No recovery tail is truncated and no additional calendar days are invented.</p></article><article><h3>Keep failures and trade-offs</h3><p>All 40 combinations use the same frozen rules. Solver status, bounds and complete assignments are retained. Small independently enumerated model fixtures check timing, bed conflicts, fixed windows and the two-stage objectives; fixtures are tests, not healthcare evidence.</p></article></div>
+    <p>The associated research studies workload balance. This independent adaptation compares admission delay with extra theatre capacity instead. It does not reproduce the paper’s workload-equity objective or claim to match its published results. The source audit confirms that each additional-specialty configuration expands ward eligibility while preserving the same patient requirements, beds and theatre budgets. This represents supplied compatibility assumptions, not an evaluated clinical training programme.</p>
+  </div></section>
+  <StudyEvidence title="Open benchmark. Complete scheduling evidence." notebook="healthcare">
+    <Fragment slot="description"><p>Pieter Smet (2023), <em>Data for “Generating balanced workload allocations in hospitals”</em>, Mendeley Data, V1. DOI: 10.17632/3mv4rtxtfs.1. Retrieved 15 September 2026. The package contains the 20 selected native instances, prepared inputs, source attribution, frozen protocol, model code, tests and all 40 evaluated cases.</p></Fragment>
+    <p><a href="https://data.mendeley.com/datasets/3mv4rtxtfs/1">Original dataset</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0 licence</a> · <a href="https://optimization-online.org/wp-content/uploads/2023/01/balancing-static.pdf">Associated research paper</a></p>
+    <p class="source-credit">Generated benchmark data and derived schedules retain source attribution. The authors and hospital do not endorse this independent adaptation.</p>
+  </StudyEvidence>
+</Site>

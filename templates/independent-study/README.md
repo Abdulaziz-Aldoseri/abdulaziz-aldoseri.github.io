@@ -1,4 +1,4 @@
-# Independent study template — version 2.1.0
+# Independent study template — version 2.1.1
 
 Reusable source of truth for Abdulaziz Aldoseri's Decision Lab. Adopted 14 September 2026. This is an Astro repository template, not a Sites-hosted template or a new CV. The shared presentation is implemented in `src/components/StudyHeader.astro`, `DecisionBrief.astro` and `StudyEvidence.astro`; `src/data/studies.ts` contains display adapters. Each study retains its own model, explorer and frozen evidence.
 
@@ -57,9 +57,9 @@ Under `materials/website/releases/<milestone>/`, retain audit, download inventor
 
 For predictive studies, freeze chronology, cohort and tuning before evaluation. For a historical deterministic planning envelope, record why train/validation/test is not applicable and call its known inputs retrospective. For simulation, define state transitions, conservation, initialization, randomness/replications if applicable and what is assumed. Use one credible feasible simple baseline under the same information, resource limits and objective interpretation. A perfect-information comparator must be labelled as unattainable at the decision time.
 
-Every external dataset needs open reuse rights and attribution. Missing costs, handle times, fleet availability, latent demand and dispatch feasibility must remain missing or explicit hypothetical controls. Do not turn scenario assumptions into fabricated observed records. No airline/telecom employment, deployment, realized savings or service-improvement claim follows from an independent study.
+Every external dataset needs open reuse rights and attribution. Missing costs, handle times, fleet availability, latent demand and dispatch feasibility must remain missing or explicit hypothetical controls. Do not turn scenario assumptions into fabricated observed records. No healthcare, airline or telecom employment, operational deployment, realized savings or service-improvement claim follows from an independent study. Healthcare scheduling keeps clinical treatment requirements as supplied inputs; it does not establish clinical validation or patient outcomes.
 
-## Five-study application matrix
+## Independent-study application matrix
 
 | Study | Decision | Evidence design | Critical distinction |
 | --- | --- | --- | --- |
@@ -68,8 +68,11 @@ Every external dataset needs open reuse rights and attribution. Missing costs, h
 | Retail | Whole product-unit allocations | Rolling historical activity scenarios | Positive invoice activity does not establish fulfilment or latent demand; weighted mismatch is not measured lost sales. |
 | Airline fleet | Aircraft counts by type and aggregate service allocation | Retrospective historical capacity planning | Monthly hour/seat coverage does not establish feasible timetables or procurement economics. |
 | Telecom staff | Whole staff allocation across work queues | Historical intake with hypothetical processing capacity | FCC complaints are regulator intake; simulated casework backlog is not an operator queue or measured SLA. |
+| Healthcare admissions | Admission day and compatible ward, linked to surgery and recovery capacity | Deterministic generated hospital benchmark with predefined capacity scenarios | Generated benchmark patients are not observed hospital trajectories; bed/theatre feasibility is not clinical or operational validation. |
 
-The last two studies must pass their own evidence gates. Equal sector prominence means equal card treatment and access, not identical methods or artificial positive results. Historical thesis/coursework/professional evidence retains its original provenance and is not relabelled an independent study.
+Every new study must pass its own evidence gates. Equal sector prominence means equal card treatment and access, not identical methods or artificial positive results. Historical thesis/coursework/professional evidence retains its original provenance and is not relabelled an independent study.
+
+Version 2.1.1 extends the documented application matrix to healthcare admissions; the shared presentation and interaction contract remains compatible with 2.1.0. Each new study remains planned until its own source, model, reproduction and review gates pass. Healthcare evidence version 1.0.0 completed those gates on 15 September 2026; its frozen scientific files are separate from this compatible template extension.
 
 ## Reuse and change control
 

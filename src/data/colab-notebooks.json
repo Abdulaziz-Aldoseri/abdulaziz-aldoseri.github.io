@@ -63,5 +63,18 @@
     "scientificNotebookSha256": "763c7de6364eab7f2df245c74c53a5c2d42e3172386014db6871f1483268dc16",
     "deliveryVersion": "1.0.0",
     "hostedColabExecutionVerified": false
+  },
+  "healthcare": {
+    "colabUrl": "https://colab.research.google.com/github/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/blob/master/public/notebooks/healthcare.ipynb",
+    "notebookPath": "/notebooks/healthcare.ipynb",
+    "notebookSha256": "bfa7e029fead16a7263d502c9e3253c26e2aad29ec0f3bc51e6e08c104a03bf5",
+    "packageUrl": "https://raw.githubusercontent.com/Abdulaziz-Aldoseri/abdulaziz-aldoseri.github.io/master/public/files/healthcare/healthcare-scheduling-reproducibility.zip",
+    "packagePath": "/files/healthcare/healthcare-scheduling-reproducibility.zip",
+    "packageBytes": 402310,
+    "packageSha256": "d39f736890dc678c03c103a95669699918895a68b66cb0341c350b25379b60c1",
+    "scientificNotebookPath": "/files/healthcare/healthcare_scheduling.ipynb",
+    "scientificNotebookSha256": "83c9947afc34613202918433cfcd34886f349a53759cd99c8405fcb15f91c868",
+    "deliveryVersion": "1.0.0",
+    "hostedColabExecutionVerified": false
   }
 }

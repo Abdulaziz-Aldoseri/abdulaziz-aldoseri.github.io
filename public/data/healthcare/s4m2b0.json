@@ -1,0 +1,3364 @@
+{
+  "id": "s4m2b0",
+  "parameters": {
+    "seed": 4,
+    "m": 2,
+    "closed_beds": 0
+  },
+  "input_sha256": "8b6713f2f8f4124429f3e73dc229674b6265b416822695bd9c94e61ba441d021",
+  "instance": {
+    "seed": 4,
+    "m": 2,
+    "source": "s4m2.dat",
+    "sha256": "77df3e794484f0819f0f6f3dc559012f2c6d7294cbca70b1d380da4efeb74d73",
+    "days": 7,
+    "wards": [
+      {
+        "id": "NKO",
+        "capacity": 15,
+        "major": "NKO",
+        "minors": [
+          "VAT",
+          "ABD"
+        ],
+        "carryover": [
+          5,
+          4,
+          3,
+          3,
+          3,
+          2,
+          2
+        ]
+      },
+      {
+        "id": "ABD",
+        "capacity": 38,
+        "major": "ABD",
+        "minors": [
+          "VAT",
+          "NKO"
+        ],
+        "carryover": [
+          21,
+          20,
+          19,
+          15,
+          9,
+          8,
+          6
+        ]
+      },
+      {
+        "id": "THO",
+        "capacity": 40,
+        "major": "THO",
+        "minors": [
+          "ABD",
+          "NKO"
+        ],
+        "carryover": [
+          15,
+          14,
+          13,
+          9,
+          6,
+          6,
+          6
+        ]
+      },
+      {
+        "id": "VAT",
+        "capacity": 23,
+        "major": "VAT",
+        "minors": [
+          "THO",
+          "ABD"
+        ],
+        "carryover": [
+          7,
+          6,
+          5,
+          4,
+          2,
+          1,
+          0
+        ]
+      }
+    ],
+    "specialties": [
+      {
+        "id": "NKO",
+        "minutes": [
+          340,
+          345,
+          300,
+          345,
+          400,
+          104,
+          73
+        ]
+      },
+      {
+        "id": "ABD",
+        "minutes": [
+          552,
+          647,
+          346,
+          702,
+          612,
+          138,
+          118
+        ]
+      },
+      {
+        "id": "THO",
+        "minutes": [
+          371,
+          929,
+          731,
+          959,
+          679,
+          271,
+          315
+        ]
+      },
+      {
+        "id": "VAT",
+        "minutes": [
+          391,
+          520,
+          411,
+          498,
+          425,
+          187,
+          208
+        ]
+      }
+    ],
+    "patients": [
+      {
+        "id": "patient0",
+        "specialty": "NKO",
+        "earliest": 0,
+        "latest": 2,
+        "los": 2,
+        "duration": 243
+      },
+      {
+        "id": "patient1",
+        "specialty": "NKO",
+        "earliest": 0,
+        "latest": 0,
+        "los": 2,
+        "duration": 172
+      },
+      {
+        "id": "patient2",
+        "specialty": "NKO",
+        "earliest": 1,
+        "latest": 1,
+        "los": 6,
+        "duration": 170
+      },
+      {
+        "id": "patient3",
+        "specialty": "NKO",
+        "earliest": 1,
+        "latest": 1,
+        "los": 4,
+        "duration": 159
+      },
+      {
+        "id": "patient4",
+        "specialty": "NKO",
+        "earliest": 1,
+        "latest": 5,
+        "los": 2,
+        "duration": 127
+      },
+      {
+        "id": "patient5",
+        "specialty": "NKO",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 164
+      },
+      {
+        "id": "patient6",
+        "specialty": "NKO",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 245
+      },
+      {
+        "id": "patient7",
+        "specialty": "NKO",
+        "earliest": 3,
+        "latest": 6,
+        "los": 1,
+        "duration": 108
+      },
+      {
+        "id": "patient8",
+        "specialty": "NKO",
+        "earliest": 3,
+        "latest": 4,
+        "los": 3,
+        "duration": 173
+      },
+      {
+        "id": "patient9",
+        "specialty": "NKO",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 73
+      },
+      {
+        "id": "patient10",
+        "specialty": "NKO",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 129
+      },
+      {
+        "id": "patient11",
+        "specialty": "NKO",
+        "earliest": 4,
+        "latest": 5,
+        "los": 2,
+        "duration": 54
+      },
+      {
+        "id": "patient12",
+        "specialty": "NKO",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 124
+      },
+      {
+        "id": "patient13",
+        "specialty": "NKO",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 33
+      },
+      {
+        "id": "patient14",
+        "specialty": "NKO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 90
+      },
+      {
+        "id": "patient15",
+        "specialty": "NKO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 91
+      },
+      {
+        "id": "patient16",
+        "specialty": "NKO",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 105
+      },
+      {
+        "id": "patient17",
+        "specialty": "NKO",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 131
+      },
+      {
+        "id": "patient18",
+        "specialty": "NKO",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 69
+      },
+      {
+        "id": "patient19",
+        "specialty": "ABD",
+        "earliest": 0,
+        "latest": 0,
+        "los": 7,
+        "duration": 194
+      },
+      {
+        "id": "patient20",
+        "specialty": "ABD",
+        "earliest": 0,
+        "latest": 3,
+        "los": 4,
+        "duration": 134
+      },
+      {
+        "id": "patient21",
+        "specialty": "ABD",
+        "earliest": 0,
+        "latest": 3,
+        "los": 4,
+        "duration": 132
+      },
+      {
+        "id": "patient22",
+        "specialty": "ABD",
+        "earliest": 0,
+        "latest": 2,
+        "los": 3,
+        "duration": 123
+      },
+      {
+        "id": "patient23",
+        "specialty": "ABD",
+        "earliest": 0,
+        "latest": 0,
+        "los": 7,
+        "duration": 97
+      },
+      {
+        "id": "patient24",
+        "specialty": "ABD",
+        "earliest": 0,
+        "latest": 0,
+        "los": 7,
+        "duration": 127
+      },
+      {
+        "id": "patient25",
+        "specialty": "ABD",
+        "earliest": 1,
+        "latest": 2,
+        "los": 5,
+        "duration": 195
+      },
+      {
+        "id": "patient26",
+        "specialty": "ABD",
+        "earliest": 1,
+        "latest": 3,
+        "los": 4,
+        "duration": 81
+      },
+      {
+        "id": "patient27",
+        "specialty": "ABD",
+        "earliest": 1,
+        "latest": 1,
+        "los": 6,
+        "duration": 134
+      },
+      {
+        "id": "patient28",
+        "specialty": "ABD",
+        "earliest": 1,
+        "latest": 1,
+        "los": 3,
+        "duration": 54
+      },
+      {
+        "id": "patient29",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 98
+      },
+      {
+        "id": "patient30",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 4,
+        "los": 3,
+        "duration": 39
+      },
+      {
+        "id": "patient31",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 5,
+        "los": 2,
+        "duration": 95
+      },
+      {
+        "id": "patient32",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 23
+      },
+      {
+        "id": "patient33",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 4,
+        "los": 3,
+        "duration": 67
+      },
+      {
+        "id": "patient34",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 68
+      },
+      {
+        "id": "patient35",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 3,
+        "los": 2,
+        "duration": 79
+      },
+      {
+        "id": "patient36",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 100
+      },
+      {
+        "id": "patient37",
+        "specialty": "ABD",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 51
+      },
+      {
+        "id": "patient38",
+        "specialty": "ABD",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 67
+      },
+      {
+        "id": "patient39",
+        "specialty": "ABD",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 85
+      },
+      {
+        "id": "patient40",
+        "specialty": "ABD",
+        "earliest": 5,
+        "latest": 5,
+        "los": 1,
+        "duration": 94
+      },
+      {
+        "id": "patient41",
+        "specialty": "ABD",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 156
+      },
+      {
+        "id": "patient42",
+        "specialty": "ABD",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 97
+      },
+      {
+        "id": "patient43",
+        "specialty": "ABD",
+        "earliest": 5,
+        "latest": 6,
+        "los": 1,
+        "duration": 120
+      },
+      {
+        "id": "patient44",
+        "specialty": "ABD",
+        "earliest": 5,
+        "latest": 6,
+        "los": 1,
+        "duration": 137
+      },
+      {
+        "id": "patient45",
+        "specialty": "ABD",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 315
+      },
+      {
+        "id": "patient46",
+        "specialty": "ABD",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 80
+      },
+      {
+        "id": "patient47",
+        "specialty": "ABD",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 225
+      },
+      {
+        "id": "patient48",
+        "specialty": "ABD",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 66
+      },
+      {
+        "id": "patient49",
+        "specialty": "ABD",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 209
+      },
+      {
+        "id": "patient50",
+        "specialty": "ABD",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 36
+      },
+      {
+        "id": "patient51",
+        "specialty": "THO",
+        "earliest": 0,
+        "latest": 0,
+        "los": 7,
+        "duration": 340
+      },
+      {
+        "id": "patient52",
+        "specialty": "THO",
+        "earliest": 0,
+        "latest": 0,
+        "los": 7,
+        "duration": 230
+      },
+      {
+        "id": "patient53",
+        "specialty": "THO",
+        "earliest": 0,
+        "latest": 0,
+        "los": 7,
+        "duration": 227
+      },
+      {
+        "id": "patient54",
+        "specialty": "THO",
+        "earliest": 1,
+        "latest": 1,
+        "los": 6,
+        "duration": 211
+      },
+      {
+        "id": "patient55",
+        "specialty": "THO",
+        "earliest": 1,
+        "latest": 1,
+        "los": 6,
+        "duration": 164
+      },
+      {
+        "id": "patient56",
+        "specialty": "THO",
+        "earliest": 1,
+        "latest": 1,
+        "los": 6,
+        "duration": 219
+      },
+      {
+        "id": "patient57",
+        "specialty": "THO",
+        "earliest": 1,
+        "latest": 3,
+        "los": 4,
+        "duration": 343
+      },
+      {
+        "id": "patient58",
+        "specialty": "THO",
+        "earliest": 2,
+        "latest": 2,
+        "los": 3,
+        "duration": 136
+      },
+      {
+        "id": "patient59",
+        "specialty": "THO",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 231
+      },
+      {
+        "id": "patient60",
+        "specialty": "THO",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 89
+      },
+      {
+        "id": "patient61",
+        "specialty": "THO",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 167
+      },
+      {
+        "id": "patient62",
+        "specialty": "THO",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 63
+      },
+      {
+        "id": "patient63",
+        "specialty": "THO",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 160
+      },
+      {
+        "id": "patient64",
+        "specialty": "THO",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 37
+      },
+      {
+        "id": "patient65",
+        "specialty": "THO",
+        "earliest": 3,
+        "latest": 3,
+        "los": 1,
+        "duration": 111
+      },
+      {
+        "id": "patient66",
+        "specialty": "THO",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 114
+      },
+      {
+        "id": "patient67",
+        "specialty": "THO",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 133
+      },
+      {
+        "id": "patient68",
+        "specialty": "THO",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 170
+      },
+      {
+        "id": "patient69",
+        "specialty": "THO",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 84
+      },
+      {
+        "id": "patient70",
+        "specialty": "THO",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 112
+      },
+      {
+        "id": "patient71",
+        "specialty": "THO",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 144
+      },
+      {
+        "id": "patient72",
+        "specialty": "THO",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 158
+      },
+      {
+        "id": "patient73",
+        "specialty": "THO",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 270
+      },
+      {
+        "id": "patient74",
+        "specialty": "THO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 164
+      },
+      {
+        "id": "patient75",
+        "specialty": "THO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 206
+      },
+      {
+        "id": "patient76",
+        "specialty": "THO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 236
+      },
+      {
+        "id": "patient77",
+        "specialty": "THO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 565
+      },
+      {
+        "id": "patient78",
+        "specialty": "THO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 135
+      },
+      {
+        "id": "patient79",
+        "specialty": "THO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 397
+      },
+      {
+        "id": "patient80",
+        "specialty": "THO",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 110
+      },
+      {
+        "id": "patient81",
+        "specialty": "THO",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 367
+      },
+      {
+        "id": "patient82",
+        "specialty": "THO",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 59
+      },
+      {
+        "id": "patient83",
+        "specialty": "VAT",
+        "earliest": 0,
+        "latest": 0,
+        "los": 6,
+        "duration": 182
+      },
+      {
+        "id": "patient84",
+        "specialty": "VAT",
+        "earliest": 0,
+        "latest": 3,
+        "los": 2,
+        "duration": 117
+      },
+      {
+        "id": "patient85",
+        "specialty": "VAT",
+        "earliest": 1,
+        "latest": 2,
+        "los": 2,
+        "duration": 115
+      },
+      {
+        "id": "patient86",
+        "specialty": "VAT",
+        "earliest": 1,
+        "latest": 4,
+        "los": 2,
+        "duration": 106
+      },
+      {
+        "id": "patient87",
+        "specialty": "VAT",
+        "earliest": 1,
+        "latest": 1,
+        "los": 6,
+        "duration": 80
+      },
+      {
+        "id": "patient88",
+        "specialty": "VAT",
+        "earliest": 1,
+        "latest": 1,
+        "los": 6,
+        "duration": 111
+      },
+      {
+        "id": "patient89",
+        "specialty": "VAT",
+        "earliest": 1,
+        "latest": 2,
+        "los": 5,
+        "duration": 184
+      },
+      {
+        "id": "patient90",
+        "specialty": "VAT",
+        "earliest": 2,
+        "latest": 2,
+        "los": 4,
+        "duration": 65
+      },
+      {
+        "id": "patient91",
+        "specialty": "VAT",
+        "earliest": 2,
+        "latest": 2,
+        "los": 1,
+        "duration": 118
+      },
+      {
+        "id": "patient92",
+        "specialty": "VAT",
+        "earliest": 2,
+        "latest": 5,
+        "los": 1,
+        "duration": 40
+      },
+      {
+        "id": "patient93",
+        "specialty": "VAT",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 81
+      },
+      {
+        "id": "patient94",
+        "specialty": "VAT",
+        "earliest": 2,
+        "latest": 2,
+        "los": 5,
+        "duration": 27
+      },
+      {
+        "id": "patient95",
+        "specialty": "VAT",
+        "earliest": 3,
+        "latest": 5,
+        "los": 2,
+        "duration": 78
+      },
+      {
+        "id": "patient96",
+        "specialty": "VAT",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 15
+      },
+      {
+        "id": "patient97",
+        "specialty": "VAT",
+        "earliest": 3,
+        "latest": 3,
+        "los": 1,
+        "duration": 51
+      },
+      {
+        "id": "patient98",
+        "specialty": "VAT",
+        "earliest": 3,
+        "latest": 6,
+        "los": 1,
+        "duration": 52
+      },
+      {
+        "id": "patient99",
+        "specialty": "VAT",
+        "earliest": 3,
+        "latest": 3,
+        "los": 4,
+        "duration": 63
+      },
+      {
+        "id": "patient100",
+        "specialty": "VAT",
+        "earliest": 3,
+        "latest": 3,
+        "los": 1,
+        "duration": 83
+      },
+      {
+        "id": "patient101",
+        "specialty": "VAT",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 37
+      },
+      {
+        "id": "patient102",
+        "specialty": "VAT",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 51
+      },
+      {
+        "id": "patient103",
+        "specialty": "VAT",
+        "earliest": 4,
+        "latest": 5,
+        "los": 1,
+        "duration": 69
+      },
+      {
+        "id": "patient104",
+        "specialty": "VAT",
+        "earliest": 4,
+        "latest": 4,
+        "los": 3,
+        "duration": 77
+      },
+      {
+        "id": "patient105",
+        "specialty": "VAT",
+        "earliest": 4,
+        "latest": 6,
+        "los": 1,
+        "duration": 140
+      },
+      {
+        "id": "patient106",
+        "specialty": "VAT",
+        "earliest": 5,
+        "latest": 6,
+        "los": 1,
+        "duration": 80
+      },
+      {
+        "id": "patient107",
+        "specialty": "VAT",
+        "earliest": 5,
+        "latest": 5,
+        "los": 2,
+        "duration": 103
+      },
+      {
+        "id": "patient108",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 120
+      },
+      {
+        "id": "patient109",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 325
+      },
+      {
+        "id": "patient110",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 64
+      },
+      {
+        "id": "patient111",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 217
+      },
+      {
+        "id": "patient112",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 51
+      },
+      {
+        "id": "patient113",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 199
+      },
+      {
+        "id": "patient114",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 25
+      },
+      {
+        "id": "patient115",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 155
+      },
+      {
+        "id": "patient116",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 178
+      },
+      {
+        "id": "patient117",
+        "specialty": "VAT",
+        "earliest": 6,
+        "latest": 6,
+        "los": 1,
+        "duration": 214
+      }
+    ]
+  },
+  "schedules": {
+    "baseline": {
+      "status": "verified_baseline",
+      "message": "First complete deadline-first schedule.",
+      "assignments": [
+        {
+          "patient_id": "patient0",
+          "ward_id": "NKO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient1",
+          "ward_id": "NKO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient2",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient3",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient4",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient5",
+          "ward_id": "NKO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient6",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient7",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient8",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient9",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient10",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient11",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient12",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient13",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient14",
+          "ward_id": "NKO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient15",
+          "ward_id": "NKO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient16",
+          "ward_id": "NKO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient17",
+          "ward_id": "NKO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient18",
+          "ward_id": "NKO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient19",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient20",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient21",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient22",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient23",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient24",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient25",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient26",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient27",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient28",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient29",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient30",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient31",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient32",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient33",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient34",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient35",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient36",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient37",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient38",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient39",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient40",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient41",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient42",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient43",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient44",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient45",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient46",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient47",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient48",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient49",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient50",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient51",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient52",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient53",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient54",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient55",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient56",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient57",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient58",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient59",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient60",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient61",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient62",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient63",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient64",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient65",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient66",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient67",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient68",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient69",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient70",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient71",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient72",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient73",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient74",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient75",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient76",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient77",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient78",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient79",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient80",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient81",
+          "ward_id": "THO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient82",
+          "ward_id": "THO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient83",
+          "ward_id": "VAT",
+          "day": 0
+        },
+        {
+          "patient_id": "patient84",
+          "ward_id": "VAT",
+          "day": 0
+        },
+        {
+          "patient_id": "patient85",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient86",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient87",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient88",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient89",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient90",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient91",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient92",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient93",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient94",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient95",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient96",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient97",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient98",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient99",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient100",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient101",
+          "ward_id": "VAT",
+          "day": 4
+        },
+        {
+          "patient_id": "patient102",
+          "ward_id": "VAT",
+          "day": 4
+        },
+        {
+          "patient_id": "patient103",
+          "ward_id": "VAT",
+          "day": 4
+        },
+        {
+          "patient_id": "patient104",
+          "ward_id": "VAT",
+          "day": 4
+        },
+        {
+          "patient_id": "patient105",
+          "ward_id": "VAT",
+          "day": 4
+        },
+        {
+          "patient_id": "patient106",
+          "ward_id": "VAT",
+          "day": 5
+        },
+        {
+          "patient_id": "patient107",
+          "ward_id": "VAT",
+          "day": 5
+        },
+        {
+          "patient_id": "patient108",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient109",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient110",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient111",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient112",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient113",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient114",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient115",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient116",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient117",
+          "ward_id": "VAT",
+          "day": 6
+        }
+      ],
+      "verification": {
+        "complete": true,
+        "feasible": true,
+        "errors": []
+      },
+      "metrics": {
+        "delay_days": 0,
+        "mean_delay_days": 0.0,
+        "delayed_patients": 0,
+        "max_delay_days": 0,
+        "overtime_minutes": 6027,
+        "additional_session_minutes": 0,
+        "minor_assignments": 0,
+        "min_bed_slack": 1
+      },
+      "occupancy": [
+        [
+          7,
+          9,
+          7,
+          10,
+          13,
+          13,
+          14
+        ],
+        [
+          27,
+          30,
+          29,
+          33,
+          26,
+          27,
+          25
+        ],
+        [
+          18,
+          21,
+          27,
+          27,
+          28,
+          33,
+          35
+        ],
+        [
+          9,
+          13,
+          16,
+          17,
+          17,
+          15,
+          20
+        ]
+      ],
+      "or_minutes": [
+        [
+          415,
+          456,
+          164,
+          599,
+          340,
+          181,
+          305
+        ],
+        [
+          807,
+          464,
+          0,
+          620,
+          152,
+          604,
+          931
+        ],
+        [
+          797,
+          937,
+          883,
+          528,
+          768,
+          1813,
+          426
+        ],
+        [
+          299,
+          596,
+          331,
+          342,
+          374,
+          183,
+          1548
+        ]
+      ],
+      "solver_stages": [],
+      "search": {
+        "nodes": 118,
+        "node_limit": 100000,
+        "seconds": 0.01600000000325963,
+        "stop_reason": "complete"
+      },
+      "assignment_sha256": "93b3711d1d604cc8cb7f9b579644faa983e71c13133f8a8339cee943f3894079"
+    },
+    "delay_first": {
+      "status": "lexicographic_optimal",
+      "message": "Both objective stages proven optimal and complete schedule verified.",
+      "assignments": [
+        {
+          "patient_id": "patient0",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient1",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient2",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient3",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient4",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient5",
+          "ward_id": "ABD",
+          "day": 2
+        },
+        {
+          "patient_id": "patient6",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient7",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient8",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient9",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient10",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient11",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient12",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient13",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient14",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient15",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient16",
+          "ward_id": "THO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient17",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient18",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient19",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient20",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient21",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient22",
+          "ward_id": "VAT",
+          "day": 0
+        },
+        {
+          "patient_id": "patient23",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient24",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient25",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient26",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient27",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient28",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient29",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient30",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient31",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient32",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient33",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient34",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient35",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient36",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient37",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient38",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient39",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient40",
+          "ward_id": "VAT",
+          "day": 5
+        },
+        {
+          "patient_id": "patient41",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient42",
+          "ward_id": "VAT",
+          "day": 5
+        },
+        {
+          "patient_id": "patient43",
+          "ward_id": "NKO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient44",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient45",
+          "ward_id": "THO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient46",
+          "ward_id": "NKO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient47",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient48",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient49",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient50",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient51",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient52",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient53",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient54",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient55",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient56",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient57",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient58",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient59",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient60",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient61",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient62",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient63",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient64",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient65",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient66",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient67",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient68",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient69",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient70",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient71",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient72",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient73",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient74",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient75",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient76",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient77",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient78",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient79",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient80",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient81",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient82",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient83",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient84",
+          "ward_id": "VAT",
+          "day": 0
+        },
+        {
+          "patient_id": "patient85",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient86",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient87",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient88",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient89",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient90",
+          "ward_id": "NKO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient91",
+          "ward_id": "NKO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient92",
+          "ward_id": "NKO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient93",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient94",
+          "ward_id": "NKO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient95",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient96",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient97",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient98",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient99",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient100",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient101",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient102",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient103",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient104",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient105",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient106",
+          "ward_id": "NKO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient107",
+          "ward_id": "NKO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient108",
+          "ward_id": "NKO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient109",
+          "ward_id": "NKO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient110",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient111",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient112",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient113",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient114",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient115",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient116",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient117",
+          "ward_id": "ABD",
+          "day": 6
+        }
+      ],
+      "verification": {
+        "complete": true,
+        "feasible": true,
+        "errors": []
+      },
+      "metrics": {
+        "delay_days": 0,
+        "mean_delay_days": 0.0,
+        "delayed_patients": 0,
+        "max_delay_days": 0,
+        "overtime_minutes": 6027,
+        "additional_session_minutes": 0,
+        "minor_assignments": 60,
+        "min_bed_slack": 0
+      },
+      "occupancy": [
+        [
+          5,
+          8,
+          11,
+          14,
+          15,
+          14,
+          12
+        ],
+        [
+          25,
+          26,
+          26,
+          27,
+          24,
+          25,
+          30
+        ],
+        [
+          22,
+          27,
+          31,
+          31,
+          34,
+          39,
+          40
+        ],
+        [
+          9,
+          12,
+          11,
+          15,
+          11,
+          10,
+          12
+        ]
+      ],
+      "or_minutes": [
+        [
+          415,
+          456,
+          164,
+          599,
+          340,
+          181,
+          305
+        ],
+        [
+          807,
+          464,
+          0,
+          620,
+          152,
+          604,
+          931
+        ],
+        [
+          797,
+          937,
+          883,
+          528,
+          768,
+          1813,
+          426
+        ],
+        [
+          299,
+          596,
+          331,
+          342,
+          374,
+          183,
+          1548
+        ]
+      ],
+      "solver_stages": [
+        {
+          "stage": 1,
+          "objective": "delay_days",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "optimal": true,
+          "objective_value": 0.0,
+          "dual_bound": 0.0,
+          "gap": 0.0,
+          "nodes": 1,
+          "seconds": 0.014999999955762178,
+          "primary_value_locked": null
+        },
+        {
+          "stage": 2,
+          "objective": "overtime_minutes",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "optimal": true,
+          "objective_value": 6027.0,
+          "dual_bound": 6027.0,
+          "gap": 0.0,
+          "nodes": 1,
+          "seconds": 0.01600000000325963,
+          "primary_value_locked": 0
+        }
+      ],
+      "search": null,
+      "assignment_sha256": "9e9030c244e22b5c67441ec09714c3ebbbf89241f6e69d28246379d0f162cc70"
+    },
+    "overtime_first": {
+      "status": "lexicographic_optimal",
+      "message": "Both objective stages proven optimal and complete schedule verified.",
+      "assignments": [
+        {
+          "patient_id": "patient0",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient1",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient2",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient3",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient4",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient5",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient6",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient7",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient8",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient9",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient10",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient11",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient12",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient13",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient14",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient15",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient16",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient17",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient18",
+          "ward_id": "NKO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient19",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient20",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient21",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient22",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient23",
+          "ward_id": "NKO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient24",
+          "ward_id": "VAT",
+          "day": 0
+        },
+        {
+          "patient_id": "patient25",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient26",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient27",
+          "ward_id": "NKO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient28",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient29",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient30",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient31",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient32",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient33",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient34",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient35",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient36",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient37",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient38",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient39",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient40",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient41",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient42",
+          "ward_id": "VAT",
+          "day": 5
+        },
+        {
+          "patient_id": "patient43",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient44",
+          "ward_id": "ABD",
+          "day": 5
+        },
+        {
+          "patient_id": "patient45",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient46",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient47",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient48",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient49",
+          "ward_id": "THO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient50",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient51",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient52",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient53",
+          "ward_id": "THO",
+          "day": 0
+        },
+        {
+          "patient_id": "patient54",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient55",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient56",
+          "ward_id": "THO",
+          "day": 1
+        },
+        {
+          "patient_id": "patient57",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient58",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient59",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient60",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient61",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient62",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient63",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient64",
+          "ward_id": "THO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient65",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient66",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient67",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient68",
+          "ward_id": "THO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient69",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient70",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient71",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient72",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient73",
+          "ward_id": "THO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient74",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient75",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient76",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient77",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient78",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient79",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient80",
+          "ward_id": "THO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient81",
+          "ward_id": "THO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient82",
+          "ward_id": "THO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient83",
+          "ward_id": "VAT",
+          "day": 0
+        },
+        {
+          "patient_id": "patient84",
+          "ward_id": "ABD",
+          "day": 0
+        },
+        {
+          "patient_id": "patient85",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient86",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient87",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient88",
+          "ward_id": "ABD",
+          "day": 1
+        },
+        {
+          "patient_id": "patient89",
+          "ward_id": "VAT",
+          "day": 1
+        },
+        {
+          "patient_id": "patient90",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient91",
+          "ward_id": "ABD",
+          "day": 2
+        },
+        {
+          "patient_id": "patient92",
+          "ward_id": "NKO",
+          "day": 2
+        },
+        {
+          "patient_id": "patient93",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient94",
+          "ward_id": "VAT",
+          "day": 2
+        },
+        {
+          "patient_id": "patient95",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient96",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient97",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient98",
+          "ward_id": "VAT",
+          "day": 3
+        },
+        {
+          "patient_id": "patient99",
+          "ward_id": "ABD",
+          "day": 3
+        },
+        {
+          "patient_id": "patient100",
+          "ward_id": "NKO",
+          "day": 3
+        },
+        {
+          "patient_id": "patient101",
+          "ward_id": "NKO",
+          "day": 4
+        },
+        {
+          "patient_id": "patient102",
+          "ward_id": "VAT",
+          "day": 4
+        },
+        {
+          "patient_id": "patient103",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient104",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient105",
+          "ward_id": "ABD",
+          "day": 4
+        },
+        {
+          "patient_id": "patient106",
+          "ward_id": "VAT",
+          "day": 5
+        },
+        {
+          "patient_id": "patient107",
+          "ward_id": "NKO",
+          "day": 5
+        },
+        {
+          "patient_id": "patient108",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient109",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient110",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient111",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient112",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient113",
+          "ward_id": "VAT",
+          "day": 6
+        },
+        {
+          "patient_id": "patient114",
+          "ward_id": "NKO",
+          "day": 6
+        },
+        {
+          "patient_id": "patient115",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient116",
+          "ward_id": "ABD",
+          "day": 6
+        },
+        {
+          "patient_id": "patient117",
+          "ward_id": "NKO",
+          "day": 6
+        }
+      ],
+      "verification": {
+        "complete": true,
+        "feasible": true,
+        "errors": []
+      },
+      "metrics": {
+        "delay_days": 9,
+        "mean_delay_days": 0.07627118644067797,
+        "delayed_patients": 7,
+        "max_delay_days": 2,
+        "overtime_minutes": 5517,
+        "additional_session_minutes": 0,
+        "minor_assignments": 55,
+        "min_bed_slack": 0
+      },
+      "occupancy": [
+        [
+          6,
+          8,
+          8,
+          12,
+          15,
+          12,
+          15
+        ],
+        [
+          24,
+          27,
+          26,
+          30,
+          27,
+          26,
+          28
+        ],
+        [
+          20,
+          24,
+          30,
+          32,
+          32,
+          39,
+          40
+        ],
+        [
+          9,
+          10,
+          13,
+          15,
+          12,
+          12,
+          14
+        ]
+      ],
+      "or_minutes": [
+        [
+          415,
+          329,
+          291,
+          426,
+          513,
+          181,
+          305
+        ],
+        [
+          552,
+          524,
+          195,
+          620,
+          152,
+          604,
+          931
+        ],
+        [
+          797,
+          594,
+          883,
+          871,
+          768,
+          1813,
+          426
+        ],
+        [
+          299,
+          490,
+          331,
+          448,
+          374,
+          183,
+          1548
+        ]
+      ],
+      "solver_stages": [
+        {
+          "stage": 1,
+          "objective": "overtime_minutes",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "optimal": true,
+          "objective_value": 5517.0,
+          "dual_bound": 5517.0,
+          "gap": 0.0,
+          "nodes": 1,
+          "seconds": 0.0940000000409782,
+          "primary_value_locked": null
+        },
+        {
+          "stage": 2,
+          "objective": "delay_days",
+          "status": 0,
+          "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+          "optimal": true,
+          "objective_value": 9.0,
+          "dual_bound": 9.0,
+          "gap": 0.0,
+          "nodes": 1,
+          "seconds": 0.030999999959021807,
+          "primary_value_locked": 5517
+        }
+      ],
+      "search": null,
+      "assignment_sha256": "bf532ecf2940d3ed6fc01db7e5b50d57b53de4736795d04f500a02b43bf59a5d"
+    }
+  },
+  "strict_calendar": {
+    "mandatory_overtime_lower_bound_minutes": 4991,
+    "certificate": [
+      {
+        "specialty_id": "NKO",
+        "day": 5,
+        "patient_ids": [
+          "patient14",
+          "patient15"
+        ],
+        "mandatory_minutes": 181,
+        "capacity_minutes": 104,
+        "excess_minutes": 77
+      },
+      {
+        "specialty_id": "NKO",
+        "day": 6,
+        "patient_ids": [
+          "patient16",
+          "patient17",
+          "patient18"
+        ],
+        "mandatory_minutes": 305,
+        "capacity_minutes": 73,
+        "excess_minutes": 232
+      },
+      {
+        "specialty_id": "ABD",
+        "day": 5,
+        "patient_ids": [
+          "patient40",
+          "patient41",
+          "patient42"
+        ],
+        "mandatory_minutes": 347,
+        "capacity_minutes": 138,
+        "excess_minutes": 209
+      },
+      {
+        "specialty_id": "ABD",
+        "day": 6,
+        "patient_ids": [
+          "patient45",
+          "patient46",
+          "patient47",
+          "patient48",
+          "patient49",
+          "patient50"
+        ],
+        "mandatory_minutes": 931,
+        "capacity_minutes": 118,
+        "excess_minutes": 813
+      },
+      {
+        "specialty_id": "THO",
+        "day": 0,
+        "patient_ids": [
+          "patient51",
+          "patient52",
+          "patient53"
+        ],
+        "mandatory_minutes": 797,
+        "capacity_minutes": 371,
+        "excess_minutes": 426
+      },
+      {
+        "specialty_id": "THO",
+        "day": 2,
+        "patient_ids": [
+          "patient58",
+          "patient59",
+          "patient60",
+          "patient61",
+          "patient62",
+          "patient63",
+          "patient64"
+        ],
+        "mandatory_minutes": 883,
+        "capacity_minutes": 731,
+        "excess_minutes": 152
+      },
+      {
+        "specialty_id": "THO",
+        "day": 4,
+        "patient_ids": [
+          "patient69",
+          "patient70",
+          "patient71",
+          "patient72",
+          "patient73"
+        ],
+        "mandatory_minutes": 768,
+        "capacity_minutes": 679,
+        "excess_minutes": 89
+      },
+      {
+        "specialty_id": "THO",
+        "day": 5,
+        "patient_ids": [
+          "patient74",
+          "patient75",
+          "patient76",
+          "patient77",
+          "patient78",
+          "patient79",
+          "patient80"
+        ],
+        "mandatory_minutes": 1813,
+        "capacity_minutes": 271,
+        "excess_minutes": 1542
+      },
+      {
+        "specialty_id": "THO",
+        "day": 6,
+        "patient_ids": [
+          "patient81",
+          "patient82"
+        ],
+        "mandatory_minutes": 426,
+        "capacity_minutes": 315,
+        "excess_minutes": 111
+      },
+      {
+        "specialty_id": "VAT",
+        "day": 6,
+        "patient_ids": [
+          "patient108",
+          "patient109",
+          "patient110",
+          "patient111",
+          "patient112",
+          "patient113",
+          "patient114",
+          "patient115",
+          "patient116",
+          "patient117"
+        ],
+        "mandatory_minutes": 1548,
+        "capacity_minutes": 208,
+        "excess_minutes": 1340
+      }
+    ],
+    "solver_stages": [],
+    "status": "proven_infeasible",
+    "method": "fixed_day_capacity_certificate",
+    "message": "Fixed-date patients alone exceed at least one specialty/day scheduled capacity."
+  }
+}

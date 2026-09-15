@@ -14,6 +14,7 @@ STUDIES = {
     "retail": ("retail_allocation", "retail-allocation"),
     "airline": ("airline_fleet", "airline-fleet"),
     "telecom": ("telecom_staff", "telecom-staff"),
+    "healthcare": ("healthcare_scheduling", "healthcare-scheduling"),
 }
 
 
@@ -84,7 +85,7 @@ def load_study_package(package_url=PACKAGE_URL, destination=None):
         if local_manifest.is_symlink() or not local_manifest.is_file() or local_manifest.read_bytes() != trusted_manifest:
             raise ValueError("The cached manifest differs from the pinned study package.")
         allowed_generated = {{"__pycache__"}}
-        if STUDY_ID == "airline":
+        if STUDY_ID == "{'healthcare' if study == 'healthcare' else 'airline'}":
             allowed_generated.add("notebook_reproduction")
         if STUDY_ID == "mobility":
             allowed_generated.update({{"local-source-downloads", "reproduced-aggregates"}})

@@ -1,0 +1,142 @@
+.healthcare-calendar {
+  --healthcare-empty: #fcf9f1;
+  --healthcare-low: #e3ece1;
+  --healthcare-medium: #b8d4c4;
+  --healthcare-high: #77b19b;
+  --healthcare-full: #08695e;
+  --healthcare-warning: #942d25;
+  --healthcare-over: #fbe7df;
+  --healthcare-copper: #a04928;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin-block: 24px;
+}
+
+.healthcare-calendar-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px 20px;
+}
+.healthcare-calendar-heading h4 { margin: 0; font-size: 1rem; font-weight: 600; }
+.healthcare-calendar-heading > span,
+.healthcare-calendar-help { color: var(--muted); font-size: .8rem; line-height: 1.6; }
+.healthcare-calendar-help { margin-block: 10px 16px; max-width: 72ch; }
+.healthcare-calendar-warning {
+  padding: 10px 14px;
+  margin-block: 12px;
+  background: var(--healthcare-over);
+  border-left: 3px solid var(--healthcare-warning);
+  color: var(--healthcare-warning);
+  font-size: .85rem;
+}
+.healthcare-calendar-empty { padding: 20px; border: 1px solid var(--line); font-size: .9rem; }
+.healthcare-calendar-scroll {
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-color: var(--teal) var(--tint);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  padding: 8px;
+  scroll-padding-inline: 156px 12px;
+}
+.healthcare-calendar-scroll:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; }
+.healthcare-calendar-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 5px;
+  table-layout: auto;
+  margin: 0;
+  font-size: .8rem;
+}
+.healthcare-calendar-table th,
+.healthcare-calendar-table td { border: 0; padding: 0; text-align: center; vertical-align: middle; white-space: normal; }
+.healthcare-calendar-table thead th { padding: 8px 5px 11px; font-size: .75rem; font-weight: 600; color: var(--muted); }
+.healthcare-calendar-table .healthcare-calendar-corner,
+.healthcare-calendar-table .healthcare-calendar-ward {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+  min-width: 130px;
+  width: 130px;
+  max-width: 170px;
+  text-align: left;
+  padding-inline: 7px 16px;
+  background: var(--paper);
+  box-shadow: 6px 0 0 var(--paper);
+  overflow-wrap: anywhere;
+}
+.healthcare-calendar-ward > span,
+.healthcare-calendar-ward > small { display: block; }
+.healthcare-calendar-ward > span { font-size: .8rem; font-weight: 600; line-height: 1.4; }
+.healthcare-calendar-ward > small { color: var(--muted); font-size: .7rem; font-weight: 400; margin-top: 6px; }
+.healthcare-calendar-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  min-width: 88px;
+  min-height: 110px;
+  padding: 7px 6px 12px;
+  border: 2px solid transparent;
+  border-radius: 3px;
+  background: var(--healthcare-empty);
+  color: var(--ink);
+  font: inherit;
+  cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+.healthcare-calendar-cell--empty { box-shadow: inset 0 0 0 1px var(--line); }
+.healthcare-calendar-cell--low { background: var(--healthcare-low); }
+.healthcare-calendar-cell--medium { background: var(--healthcare-medium); }
+.healthcare-calendar-cell--high { background: var(--healthcare-high); }
+.healthcare-calendar-cell--full { background: var(--healthcare-full); color: #fffdf6; }
+.healthcare-calendar-cell--invalid,
+.healthcare-calendar-cell--unavailable {
+  background: repeating-linear-gradient(135deg, #eeeade, #eeeade 5px, #e1e2d7 5px, #e1e2d7 7px);
+  color: #465753;
+}
+.healthcare-calendar-cell--over { background: var(--healthcare-over); color: var(--healthcare-warning); box-shadow: inset 0 0 0 1px var(--healthcare-warning); }
+.healthcare-calendar-cell[aria-pressed=true] { border-color: var(--healthcare-copper); box-shadow: inset 0 0 0 2px var(--paper); }
+.healthcare-calendar-cell:enabled:hover { border-color: var(--ink); }
+.healthcare-calendar-cell:focus-visible { outline: 3px solid var(--ink); outline-offset: 2px; position: relative; z-index: 2; }
+.healthcare-calendar-cell:disabled { cursor: default; }
+.healthcare-calendar-selected { min-height: 14px; font-size: .625rem; font-weight: 700; line-height: 1.4; letter-spacing: .025em; text-transform: uppercase; }
+.healthcare-calendar-count { white-space: nowrap; line-height: 1.2; }
+.healthcare-calendar-count strong { font-size: 1.5rem; font-weight: 600; }
+.healthcare-calendar-count > span { font-size: .75rem; }
+.healthcare-calendar-cell-note { font-size: .65rem; line-height: 1.4; max-width: 14ch; }
+.healthcare-calendar-inherited { font-size: .625rem; line-height: 1.4; max-width: 14ch; }
+.healthcare-calendar-legend { display: flex; flex-wrap: wrap; gap: 9px 17px; margin-top: 15px; color: var(--muted); font-size: .7rem; line-height: 1.5; }
+.healthcare-calendar-legend > span { display: inline-flex; align-items: center; gap: 6px; }
+.healthcare-calendar-legend i { display: inline-block; width: 14px; height: 14px; border: 1px solid #71877e; border-radius: 2px; flex-shrink: 0; }
+.healthcare-calendar-key--empty { background: var(--healthcare-empty); }
+.healthcare-calendar-key--low { background: var(--healthcare-low); }
+.healthcare-calendar-key--medium { background: var(--healthcare-medium); }
+.healthcare-calendar-key--high { background: var(--healthcare-high); }
+.healthcare-calendar-key--full { background: var(--healthcare-full); }
+.healthcare-calendar-key--unavailable { background: repeating-linear-gradient(135deg, #eeeade, #eeeade 3px, #8b968c 3px, #8b968c 4px); }
+.healthcare-calendar-key--over { background: var(--healthcare-over); border-color: var(--healthcare-warning) !important; }
+
+@media (max-width: 680px) {
+  .healthcare-calendar-scroll { padding: 4px; scroll-padding-inline: 112px 8px; }
+  .healthcare-calendar-table { border-spacing: 4px; }
+  .healthcare-calendar-table .healthcare-calendar-corner,
+  .healthcare-calendar-table .healthcare-calendar-ward { width: 96px; min-width: 96px; max-width: 116px; padding-inline: 4px 10px; }
+  .healthcare-calendar-ward > span { font-size: .75rem; }
+  .healthcare-calendar-cell { min-width: 84px; min-height: 108px; }
+}
+
+@media (forced-colors: active) {
+  .healthcare-calendar-cell { border: 1px solid ButtonText; }
+  .healthcare-calendar-cell[aria-pressed=true] { border: 3px solid Highlight; }
+  .healthcare-calendar-cell--over { border: 3px double Mark; }
+  .healthcare-calendar-cell:focus-visible { outline-color: Highlight; }
+}
