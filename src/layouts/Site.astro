@@ -1,29 +1,49 @@
 ---
+// Self-hosted variable Inter: identical rendering on iPhone, Mac and Windows.
+import '@fontsource-variable/inter';
+import interLatin from '@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url';
 import '../styles/site.css';
 import '../styles/lab.css';
 import '../styles/theme.css';
-const { title = 'Decision Science and Analytics', description = 'Abdulaziz Aldoseri — decision modelling, operations research and analytical advisory experience.', wide = false, noindex = false, home = false } = Astro.props;
+const { title = 'Decision Science | Strategy and Analytics', bareTitle = false, description = 'Abdulaziz Aldoseri — decision science and analytics: framing complex decisions, modeling the options and advising on the trade-offs.', wide = false, noindex = false, home = false } = Astro.props;
 const route = Astro.url.pathname;
-const canonicalPath = route === '/404/' || route === '/404' || route === '/404.html' ? '/404.html' : route.endsWith('/') ? route : route + '/';
-const canonical = new URL(canonicalPath, Astro.site);
+const isNotFound = route === '/404/' || route === '/404' || route === '/404.html';
+const canonical = new URL(route.endsWith('/') ? route : route + '/', Astro.site);
+const fullTitle = bareTitle ? title : `${title} | Abdulaziz Aldoseri`;
+const ogImage = new URL('/images/og-card.png', Astro.site);
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Abdulaziz Aldoseri',
+  jobTitle: 'Decision Science | Strategy and Analytics',
+  url: Astro.site?.href,
+  sameAs: ['https://www.linkedin.com/in/abdulaziz-aldoseri/'],
+  alumniOf: ['Boğaziçi University', 'Binghamton University'],
+  knowsAbout: ['Decision science', 'Operations research', 'Optimization', 'Decision analysis', 'Energy markets', 'Strategic planning'],
+};
 ---
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>{title} | Abdulaziz Aldoseri</title>
-  <meta name="description" content={description} /><link rel="canonical" href={canonical} />
-  {noindex && <meta name="robots" content="noindex" />}
-  <meta property="og:title" content={`${title} | Abdulaziz Aldoseri`} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:url" content={canonical} />
+  <title>{fullTitle}</title>
+  <meta name="description" content={description} />
+  {!isNotFound && <link rel="canonical" href={canonical} />}
+  {(noindex || isNotFound) && <meta name="robots" content="noindex" />}
+  <meta property="og:title" content={fullTitle} /><meta property="og:description" content={description} /><meta property="og:type" content={home ? 'profile' : 'website'} />{!isNotFound && <meta property="og:url" content={canonical} />}
+  <meta property="og:image" content={ogImage} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta property="og:image:alt" content="Abdulaziz Aldoseri — Decision Science | Strategy and Analytics" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" href={interLatin} as="font" type="font/woff2" crossorigin />
   <meta name="theme-color" content="#0b3439" /><link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+  {home && <script type="application/ld+json" set:html={JSON.stringify(person)} />}
 </head>
 <body class:list={[{ 'home-site': home }]}>
   <a class="skip" href="#main">Skip to content</a>
   <header class="site-header"><div class="shell header-inner">
     <a class="wordmark" href="/" aria-label="Abdulaziz Aldoseri home"><span class="monogram" aria-hidden="true">AA<span>.</span></span><span>Abdulaziz<br />Aldoseri</span></a>
-    <nav aria-label="Main navigation"><a href="/projects/">Decision Lab</a><a href={route === '/' ? '#contact' : '/#contact'}>Contact</a><a href="/files/Abdulaziz_Aldoseri_CV.pdf" download aria-label="Download CV (PDF)">CV <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="Main navigation"><a href="/projects/">Case studies</a><a href={route === '/' ? '#contact' : '/#contact'}>Contact</a><a href="/files/Abdulaziz_Aldoseri_CV.pdf" download>CV (PDF)</a></nav>
   </div></header>
   <main id="main" class:list={[{ wide }]}><slot /></main>
-  <slot name="footer"><footer class="site-footer"><div class="shell footer-inner"><p>Bahrain</p><div class="footer-links"><a href="https://www.linkedin.com/in/abdulaziz-aldoseri/">LinkedIn</a><a href="https://github.com/Abdulaziz-Aldoseri">GitHub</a></div></div></footer></slot>
+  <slot name="footer"><footer class="site-footer"><div class="shell footer-inner"><p>Abdulaziz Aldoseri · Decision Science | Strategy and Analytics</p><div class="footer-links"><a href="https://www.linkedin.com/in/abdulaziz-aldoseri/">LinkedIn</a><a href="/#contact">Contact</a></div></div></footer></slot>
 </body>
 </html>

@@ -4,7 +4,7 @@ import StudyHeader from '../../../components/StudyHeader.astro';
 import DecisionBrief from '../../../components/DecisionBrief.astro';
 import StudyEvidence from '../../../components/StudyEvidence.astro';
 import HealthcareExplorer from '../../../components/HealthcareExplorer';
-import { studies } from '../../../data/studies';
+import { studies, isHidden } from '../../../data/studies';
 import healthcare from '../../../data/healthcare-overview.json';
 import '../../../styles/allocation-studies.css';
 const reference = healthcare.default_case;
@@ -15,7 +15,7 @@ const proven = healthcare.scenarios.filter(s => s.summaries.delay_first.status =
 const missingBaseline = healthcare.scenarios.filter(s => !s.summaries.baseline.metrics).length;
 const tradeoffs = healthcare.scenarios.filter(s => s.summaries.delay_first.metrics && s.summaries.overtime_first.metrics && s.summaries.delay_first.metrics.delay_days !== s.summaries.overtime_first.metrics.delay_days && s.summaries.delay_first.metrics.overtime_minutes !== s.summaries.overtime_first.metrics.overtime_minutes).length;
 ---
-<Site title={studies.healthcare.title} description="Explore admission timing, surgery capacity and recovery-bed occupancy using open generated hospital benchmarks. Compare complete schedules through linked interactive calendars.">
+<Site noindex={isHidden(studies.healthcare)} title={studies.healthcare.title} description="Explore admission timing, surgery capacity and recovery-bed occupancy using open generated hospital benchmarks. Compare complete schedules through linked interactive calendars.">
   <StudyHeader study={studies.healthcare} />
   <DecisionBrief id="healthcare-model" title="One admission. Two connected calendars." items={[
     {label:'The decision', text:'Assign every new patient an admission day and one eligible ward. Surgery occurs on admission day. The same ward holds the patient for the complete supplied length of stay.'},
@@ -35,7 +35,7 @@ const tradeoffs = healthcare.scenarios.filter(s => s.summaries.delay_first.metri
   </DecisionBrief>
   <section class="section tint" id="healthcare-explorer"><div class="shell">
     <div class="explorer-intro"><h2>Schedule the admission. Follow the recovery bed.</h2><p>Choose a cohort, ward eligibility and bed availability. Compare scheduling priorities, select a day in the ward calendar, then inspect that day’s theatre load or an individual patient’s complete stay.</p><p><a href="#healthcare-model">Review the decision and assumptions ↑</a></p></div>
-    <HealthcareExplorer index={healthcare} client:load />
+    <HealthcareExplorer index={healthcare} client:visible />
     <noscript><p>The fixed reference schedule and complete case-comparison table remain readable. Enable JavaScript to change scenarios and select calendar cells or patients. The notebook contains all schedules.</p></noscript>
     <p class="source-credit">Source: Pieter Smet (2023), Data for “Generating balanced workload allocations in hospitals”, Mendeley Data, V1, CC BY 4.0. Independent model and presentation: Abdulaziz Aldoseri.</p>
   </div></section>

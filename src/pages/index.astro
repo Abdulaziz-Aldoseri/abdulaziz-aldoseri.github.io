@@ -1,26 +1,115 @@
 ---
 import Site from '../layouts/Site.astro';
-import HomeLabPreview from '../components/HomeLabPreview';
 import ContactLinks from '../components/ContactLinks.astro';
-import energy from '../data/energy-index.json';
+import TradeoffFrontier from '../components/TradeoffFrontier.astro';
 import '../styles/home.css';
-const scenarios = energy.summary
-  .filter(row => row.policy === 'forecast_lp' && row.power_mw === 1000)
-  .map(row => ({ duration: row.duration_h, meanRelief: row.mean_reduction_mw, worsened: row.worsened_days, days: row.days }));
+
+// Insight headlines are quoted from each case's reviewed memo.
+const selected = [
+  {
+    sector: 'Energy',
+    question: 'What is a natural-gas storage asset worth to an investor or capacity lessee?',
+    insight: 'A learned operating policy must be validated outside its training period before it is used to price an asset.',
+    method: 'Deep reinforcement learning · Asset valuation',
+    href: '/projects/evidence/',
+  },
+  {
+    sector: 'Healthcare',
+    question: 'When should surgical patients be admitted, given theatre time and recovery beds?',
+    insight: 'Accepting a few days of admission delay reduces the extra theatre time required.',
+    method: 'Integer optimization · Multi-objective optimization',
+    href: '/projects/healthcare-scheduling/',
+  },
+  {
+    sector: 'Energy',
+    question: 'Can electricity storage reduce daily demand peaks?',
+    insight: 'A forecast-based schedule lowers the average daily peak, but not on every day.',
+    method: 'Linear optimization · Forecast evaluation',
+    href: '/projects/energy-flexibility/',
+  },
+];
+
+const steps = [
+  { title: 'Frame the decision', text: 'Establish what is being decided, by whom, against which objective and under which constraints. Most of the value of an analysis is set at this stage.' },
+  { title: 'Model the options', text: 'Build the optimization, simulation or scenario model that makes the trade-offs explicit and tests each option against uncertainty.' },
+  { title: 'Advise on the trade-off', text: 'Turn the results into a recommendation, the conditions under which it holds and the risks of acting on it, in terms decision-makers can use.' },
+];
 ---
-<Site home description="Abdulaziz Aldoseri — an analyst based in Bahrain, combining research and advisory experience with operations research. Explore his Decision Lab.">
+<Site home title="Abdulaziz Aldoseri — Decision Science | Strategy and Analytics" bareTitle description="Abdulaziz Aldoseri frames complex strategic and operational decisions, builds the quantitative models that test the options, and turns the results into clear recommendations.">
+  <div class="home-hero-band">
   <section class="home-hero shell" aria-labelledby="introduction">
     <div class="home-copy">
-    <p class="eyebrow">Decision Science &amp; Analytics</p>
-    <h1 id="introduction">Abdulaziz<br /><span class="serif">Aldoseri.</span></h1>
-    <div class="home-bio">
-      <p>I’m an analyst based in Bahrain. I combine experience in economic research and advisory work with operations research to examine decisions, constraints and uncertainty.</p>
-      <p>My Decision Lab is where I explore these questions through models, interactive studies and open data.</p>
+      <p class="eyebrow">Decision Science · Strategy &amp; Analytics</p>
+      <h1 id="introduction">Abdulaziz<br /><span class="serif">Aldoseri.</span></h1>
+      <p class="home-lead">I frame complex strategic and operational decisions, build the quantitative models that test the options, and turn the results into clear recommendations.</p>
+      <p class="home-bio">Over more than ten years I advised government and industry decision-makers on energy markets, infrastructure investment and commercial strategy. I combine that experience with operations research and economics.</p>
+      <div class="home-actions">
+        <a class="button home-primary" href="#work">Selected work <span aria-hidden="true">↓</span></a>
+        <a class="home-secondary" href="/files/Abdulaziz_Aldoseri_CV.pdf" download>Download CV (PDF)</a>
+      </div>
     </div>
-    <a class="button home-lab-button" href="/projects/">Explore the Decision Lab <span aria-hidden="true">↗</span></a>
-    </div>
-    <HomeLabPreview scenarios={scenarios} client:load />
+    <TradeoffFrontier />
   </section>
+  </div>
+
+  <section class="home-band home-approach" aria-labelledby="approach">
+    <div class="shell">
+      <p class="eyebrow">Approach</p>
+      <h2 id="approach">From a hard question to a decision someone can act on.</h2>
+      <ol class="approach-steps">
+        {steps.map((step, i) => (
+          <li>
+            <span class="step-number" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <h3>{step.title}</h3>
+            <p>{step.text}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <section id="work" class="home-band home-work" aria-labelledby="work-heading" tabindex="-1">
+    <div class="shell">
+      <div class="work-heading">
+        <div>
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-heading">Case studies</h2>
+        </div>
+        <p>Independent case studies and an applied valuation model, built on open data and published benchmarks. Each starts from the decision and its answer; the model, data and assumptions sit one level deeper.</p>
+      </div>
+      <ul class="work-list">
+        {selected.map(item => (
+          <li>
+            <a class="work-card" href={item.href}>
+              <span class="work-sector">{item.sector}</span>
+              <span class="work-question">{item.question}</span>
+              <strong class="work-insight">{item.insight}</strong>
+              <span class="work-method">{item.method}</span>
+              <span class="work-link">Read the case <span aria-hidden="true">→</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a class="work-all" href="/projects/">All case studies and reports <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="home-band home-background" aria-labelledby="background">
+    <div class="shell home-background-grid">
+      <div>
+        <p class="eyebrow">Background</p>
+        <h2 id="background">Advisory experience on a quantitative foundation.</h2>
+      </div>
+      <div class="background-copy">
+        <p>At DERASAT, the Bahrain Center for Strategic, International and Energy Studies (2014–2026), most recently as Senior Analyst, I led advisory engagements for government and industry stakeholders on energy markets, infrastructure investment and commercial strategy, and spoke at regional industry forums.</p>
+        <dl class="credentials">
+          <div><dt>MSc Industrial Engineering</dt><dd>Operations Research · Boğaziçi University</dd></div>
+          <div><dt>MA Economics</dt><dd>Binghamton University · Fulbright Scholar</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
   <footer slot="footer" class="site-footer home-contact">
     <div class="shell home-contact-inner">
       <h2 id="contact" tabindex="-1">Get in touch.</h2>

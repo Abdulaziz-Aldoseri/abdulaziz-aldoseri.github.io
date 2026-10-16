@@ -1,14 +1,14 @@
 ---
 import StudyHeader from '../../../components/StudyHeader.astro';
 import StudyEvidence from '../../../components/StudyEvidence.astro';
-import { studies } from '../../../data/studies';
+import { studies, isHidden } from '../../../data/studies';
 import Site from '../../../layouts/Site.astro';
 import EnergyExplorer from '../../../components/EnergyExplorer';
 import EnergyStudyBrief from '../../../components/EnergyStudyBrief.astro';
 import index from '../../../data/energy-index.json';
 import sensitivity from '../../../data/energy-sensitivity.json';
 ---
-<Site title="Can electricity storage reduce daily peaks?" description="An open-data study of electricity storage scheduling: the decisions, forecasts and physical constraints behind peak reduction using Great Britain’s demand data.">
+<Site noindex={isHidden(studies.energy)} title="Can electricity storage reduce daily peaks?" description="An open-data study of electricity storage scheduling: the decisions, forecasts and physical constraints behind peak reduction using Great Britain’s demand data.">
 <StudyHeader study={studies.energy} />
 <EnergyStudyBrief />
 <section class="tint experiment-section" id="explorer"><div class="shell">
@@ -17,7 +17,7 @@ import sensitivity from '../../../data/energy-sensitivity.json';
     <p>Choose a store’s power and duration, then compare schedules for a day. These are evaluated scenarios: the model chooses the half-hour charging and discharging flows for each size. <a href="#model-brief-heading">Review the model and assumptions ↑</a></p>
     <p><strong>Read the result as a change in the daily peak.</strong> Peak reduction is the highest observed requirement minus the highest requirement after adding the storage schedule. A forecast error can place charging at the wrong time and create a higher peak, giving a negative result.</p>
   </div>
-  <EnergyExplorer index={index} client:load />
+  <EnergyExplorer index={index} client:visible />
   <noscript><p>The default evaluated scenario is shown above. Enable JavaScript to change the date or capacity, or inspect complete results in the Colab notebook below.</p></noscript>
   <p class="source-credit">Supported by <a href="https://www.neso.energy/data-portal/historic-demand-data">National Energy SO Open Data</a>. Historic Demand Data 2024/2025 · <a href="https://www.neso.energy/data-portal/neso-open-licence">NESO Open Data Licence</a>. Processing and model: Abdulaziz Aldoseri.</p>
 </div></section>

@@ -1,7 +1,7 @@
 ---
 import StudyHeader from '../../../components/StudyHeader.astro';
 import StudyEvidence from '../../../components/StudyEvidence.astro';
-import { studies } from '../../../data/studies';
+import { studies, isHidden } from '../../../data/studies';
 import Site from '../../../layouts/Site.astro';
 import RetailStudyBrief from '../../../components/RetailStudyBrief.astro';
 import RetailExplorer from '../../../components/RetailExplorer';
@@ -11,12 +11,12 @@ const primary = ['scenario','mean','seasonal','equal','hindsight'].map(policy=>r
 const compare = retail.comparisons.find(r => r.factor === 1 && r.priority === 0.8 && r.baseline === 'mean');
 const fmt = (v: number) => new Intl.NumberFormat('en-GB', { maximumFractionDigits: 1 }).format(v);
 ---
-<Site title="Which products get the next unit? — retail allocation" description="Explore a constrained retail allocation decision: uncertain invoice activity, shortfall priorities and a shared unit budget. An independent study using UCI Online Retail II.">
+<Site noindex={isHidden(studies.retail)} title="Which products get the next unit? — retail allocation" description="Explore a constrained retail allocation decision: uncertain invoice activity, shortfall priorities and a shared unit budget. An independent study using UCI Online Retail II.">
   <StudyHeader study={studies.retail} />
   <RetailStudyBrief />
   <section class="tint retail-explorer" id="retail-explorer"><div class="shell">
     <div class="explorer-intro"><h2>Allocate the next week’s allowance</h2><p>Choose a week, a unit budget and how strongly to prioritize shortfalls. The model chooses the allocation. <a href="#retail-model">Review the decision and assumptions ↑</a></p><p>Shortfall and leftover are counted separately for each product. They compare allocation with recorded positive invoice activity; they are not observed lost sales or unsold stock.</p></div>
-    <RetailExplorer index={retail} client:load />
+    <RetailExplorer index={retail} client:visible />
     <noscript><p>The default evaluated scenario is displayed. Enable JavaScript to explore other weeks, priorities and product minima, or inspect complete results in the Colab notebook below.</p></noscript>
     <p class="source-credit">Data: Daqing Chen, <a href="https://archive.ics.uci.edu/dataset/502/online+retail+ii">Online Retail II, UCI</a> · <a href="https://doi.org/10.24432/C5CG6D">DOI 10.24432/C5CG6D</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Filtered UK-customer subset, overlap handling, training-only selection and weekly aggregation. Model: Abdulaziz Aldoseri. No endorsement is implied.</p>
   </div></section>

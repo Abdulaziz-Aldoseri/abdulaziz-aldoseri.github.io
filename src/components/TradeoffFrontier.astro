@@ -1,0 +1,32 @@
+---
+// Illustrative efficient frontier: the shape behind most recommendations.
+// Coordinates are a stylised curve, not data from any case study.
+const frontier = 'M102.0 252.5 L114.0 231.8 L126.0 213.1 L138.0 196.4 L150.0 181.4 L162.0 167.9 L174.0 155.7 L186.0 144.8 L198.0 135.0 L210.0 126.2 L222.0 118.3 L234.0 111.2 L246.0 104.8 L258.0 99.1 L270.0 93.9 L282.0 89.3 L294.0 85.2 L306.0 81.4 L318.0 78.1 L330.0 75.1 L342.0 72.3 L354.0 69.9 L366.0 67.7 L378.0 65.8 L390.0 64.0 L402.0 62.4 L414.0 61.0 L426.0 59.7 L438.0 58.6 L450.0 57.5';
+const unreachable = `${frontier} L450.0 40.0 L102.0 40.0 Z`;
+const efficient = [[130.0, 207.4], [190.0, 141.4], [318.0, 78.1], [410.0, 61.4]];
+const dominated = [[221.4, 173.1], [261.0, 153.5], [337.7, 179.0], [154.0, 201.6], [227.8, 191.3], [448.7, 135.0], [400.9, 137.9], [341.7, 171.5], [340.5, 113.1]];
+---
+<figure class="frontier">
+  <svg viewBox="0 0 500 360" role="img" aria-labelledby="frontier-title frontier-desc">
+    <title id="frontier-title">Trade-off frontier</title>
+    <desc id="frontier-desc">Illustrative chart, not data from any case study. Options plotted by cost and service level. Efficient options lie on a curved frontier; options below it are dominated; the region above it cannot be reached. A recommended option sits at the bend, where extra cost starts buying little extra service.</desc>
+    <path class="frontier-unreachable" d={unreachable} />
+    <text class="frontier-note" x="70" y="24">Illustrative</text>
+    <text class="frontier-note" x="118" y="62">Not achievable with current resources</text>
+    <line class="frontier-axis" x1="70" y1="320" x2="470" y2="320" />
+    <line class="frontier-axis" x1="70" y1="320" x2="70" y2="40" />
+    <text class="frontier-label" x="470" y="344" text-anchor="end">Cost →</text>
+    <text class="frontier-label" x="58" y="40" text-anchor="end" transform="rotate(-90 58 40)">Service level →</text>
+    {dominated.map(([x, y]) => <circle class="frontier-dominated" cx={x} cy={y} r="5" />)}
+    <path class="frontier-line" d={frontier} />
+    {efficient.map(([x, y]) => <circle class="frontier-point" cx={x} cy={y} r="6" />)}
+    <circle class="frontier-recommended" cx="198" cy="135" r="10" />
+    <line class="frontier-callout" x1="205" y1="143" x2="300" y2="214" />
+    <text class="frontier-callout-text" x="306" y="218">Recommended</text>
+    <text class="frontier-callout-sub" x="306" y="236">beyond this point, extra cost</text>
+    <text class="frontier-callout-sub" x="306" y="252">buys little extra service</text>
+    <text class="frontier-legend" x="158" y="296">Dominated options</text>
+    <circle class="frontier-dominated" cx="148" cy="291" r="5" />
+  </svg>
+  <figcaption>Illustrative. Most decisions are a trade-off. The work is finding the options that cannot be improved on one objective without losing on another, then recommending where to sit on that frontier.</figcaption>
+</figure>

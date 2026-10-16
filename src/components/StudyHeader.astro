@@ -2,12 +2,22 @@
 import type { StudyDisplay } from '../data/studies';
 interface Props { study: StudyDisplay }
 const { study } = Astro.props;
+const status = study.evidence.stage === 'planned' ? 'Planned study' : 'Independent study';
+const eyebrow = study.eyebrow ?? `${String(study.order).padStart(2, '0')} / ${study.sector} · ${status} · ${study.year}`;
 ---
-<div class="shell study-heading" data-study={study.id} data-template-version={study.templateVersion}>
-  <a class="breadcrumb" href="/projects/">← Decision Lab</a>
-  <p class="eyebrow">{String(study.order).padStart(2, '0')} / {study.sector} · {study.evidence.stage === 'planned' ? 'Planned study' : 'Independent study'} · {study.year}</p>
+<div class:list={['shell', 'study-heading', { 'case-heading': study.kind === 'case' }]} data-study={study.id} data-template-version={study.templateVersion}>
+  <a class="breadcrumb" href="/projects/">← Case studies</a>
+  {study.retired && (
+    <p class="retired-note" role="note">
+      <strong>Earlier method study; superseded.</strong>{' '}
+      It remains available for reference. Current work is listed under <a href="/projects/">case studies</a>.
+    </p>
+  )}
+  <p class="eyebrow">{eyebrow}</p>
   <h1>{study.title}</h1>
   <p class="page-intro">{study.introduction}</p>
   <p class="study-context">{study.context}</p>
-  <nav class="study-links" aria-label="Study sections">{study.sections.map(section => <a href={`#${section.id}`}>{section.label}</a>)}</nav>
+  <nav class="study-links" aria-label="Study sections">
+    {study.sections.map(section => <a href={`#${section.id}`}>{section.label}</a>)}
+  </nav>
 </div>

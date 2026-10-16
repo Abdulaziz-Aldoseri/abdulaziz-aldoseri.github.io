@@ -4,3 +4,7 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Held case drafts and their derived data must never enter the public repository
+src/drafts/
+src/data/export-routing.json

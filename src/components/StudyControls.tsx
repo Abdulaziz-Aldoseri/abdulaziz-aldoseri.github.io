@@ -23,7 +23,7 @@ export function StepControl<T extends string | number>({label,value,options,onCh
   if(position<0)throw new Error(`Missing admitted control value: ${label}`);
   const move=(i:number)=>{if(Number.isInteger(i)&&i>=0&&i<options.length)onChange(options[i].value);};
   return <div className="study-step study-control-field">
-    <div className="study-control-label"><label htmlFor={id}>{label}</label><output htmlFor={id}>{options[position].label}</output></div>
+    <div className="study-control-label"><label htmlFor={id}>{label}</label><span className="study-control-value">{options[position].label}</span></div>
     <div className="study-step-track">
       <button type="button" aria-label={`Previous ${label.toLowerCase()}`} disabled={disabled||position===0} onClick={()=>move(position-1)}>−</button>
       <input id={id} type="range" min={0} max={options.length-1} step={1} value={position} disabled={disabled||options.length===1} aria-valuetext={options[position].label} aria-describedby={help?`${id}-help`:undefined} onChange={e=>move(Number(e.currentTarget.value))}/>

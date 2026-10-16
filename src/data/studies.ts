@@ -7,7 +7,17 @@ export interface StudyDisplay {
   title: string; introduction: string; context: string; route: string;
   evidence: StudyEvidenceState;
   sections: { id: string; label: string }[];
+  /** Flagship decision cases use the executive-memo layout and their own eyebrow. */
+  kind?: 'case';
+  eyebrow?: string;
+  /** Earlier method studies: URL stays live, but the page is noindex and unlisted. */
+  retired?: boolean;
+  /** Built but held from publication (noindex, not in sitemap, directory or homepage). */
+  unlisted?: boolean;
 }
+
+/** Single source of truth for noindex, sitemap and directory exclusion. */
+export const isHidden = (study: StudyDisplay): boolean => Boolean(study.retired || study.unlisted);
 export const studies = {
   "energy": {
     "id": "energy",
@@ -46,6 +56,7 @@ export const studies = {
   },
   "mobility": {
     "id": "mobility",
+    "retired": true,
     "templateVersion": "2.1.0",
     "order": 2,
     "sector": "Transport & mobility",
@@ -81,6 +92,7 @@ export const studies = {
   },
   "retail": {
     "id": "retail",
+    "retired": true,
     "templateVersion": "2.1.0",
     "order": 3,
     "sector": "Retail & commerce",
@@ -116,6 +128,7 @@ export const studies = {
   },
   "airline": {
     "id": "airline",
+    "retired": true,
     "templateVersion": "2.1.0",
     "order": 4,
     "sector": "Airline industry",
@@ -151,6 +164,7 @@ export const studies = {
   },
   "telecom": {
     "id": "telecom",
+    "retired": true,
     "templateVersion": "2.1.0",
     "order": 5,
     "sector": "Telecom & services",

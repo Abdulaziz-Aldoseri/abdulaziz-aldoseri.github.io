@@ -1,0 +1,57 @@
+---
+/**
+ * Executive summary for a flagship decision case: the answer first, the
+ * headline numbers with the conditions that remove them right beside them,
+ * then the trade-off and the limits. Every value is passed in by the page,
+ * which reads it from the case's evaluated outputs.
+ */
+interface Headline {
+  value: string;
+  label: string;
+  note?: string;
+}
+interface Props {
+  title: string;
+  headlines: Headline[];
+  changesTitle?: string;
+}
+const { title, headlines, changesTitle = 'The answer changes when' } = Astro.props;
+---
+<section class="case-summary" id="summary" aria-labelledby="summary-heading">
+  <div class="shell">
+    <p class="eyebrow">Executive summary</p>
+    <h2 id="summary-heading">{title}</h2>
+    <div class="case-answer">
+      <slot name="answer" />
+    </div>
+
+    <div class="case-summary-grid">
+      <dl class="case-headlines">
+        {headlines.map(item => (
+          <div>
+            <dt>{item.label}</dt>
+            <dd>
+              <strong>{item.value}</strong>
+              {item.note && <span>{item.note}</span>}
+            </dd>
+          </div>
+        ))}
+      </dl>
+      <aside class="case-changes" aria-labelledby="summary-changes">
+        <h3 id="summary-changes">{changesTitle}</h3>
+        <slot name="changes" />
+      </aside>
+    </div>
+
+    <div class="case-summary-columns">
+      <div>
+        <h3>The trade-off</h3>
+        <slot name="tradeoff" />
+      </div>
+      <div>
+        <h3>What it does not prove</h3>
+        <slot name="limits" />
+      </div>
+    </div>
+  </div>
+</section>
